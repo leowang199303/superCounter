@@ -1,0 +1,237 @@
+<ul>
+	<li>
+		<button ng-click="func.CardReader(funcDeviceFlag)" class="btn">CardReader</button>
+		<button ng-click="func.IDcardReader(funcDeviceFlag)" class="btn">IDcardReader</button>
+		<button ng-click="func.Printers(funcDeviceFlag)" class="btn">PTR-Printers</button>
+		<button ng-click="func.Fingers(funcDeviceFlag)" class="btn">FIN-Fingers</button>
+		<button ng-click="func.Epps(funcDeviceFlag)" class="btn">PIN-Epps</button>
+		<button ng-click="func.Cameras(funcDeviceFlag)" class="btn">CAM-Cameras</button>
+	</li>
+</ul>
+<!--cardReader-->
+<div class="btnOneo" ng-show="funcDeviceFlag == 0">
+	<!--上层-->
+	<div class="blueLine mb"></div>
+	<div class="oneTop">
+		<ul>
+			<!--<li>
+				<button class="btn blue" ng-click="func.caredOpen()">打开设备</button>
+			</li>-->
+			<li>
+				<button class="btn blue" ng-click="func.cardReset()">复位读卡器</button>
+			</li>
+			<li>
+				<button class="btn blue" ng-click="func.cardResetEat()">复位吞卡数</button>
+			</li>
+			<li>
+				<button class="btn blue" ng-click="func.cardGetStatus()">获取设备状态</button>
+			</li>
+			<li>
+				<button class="btn blue" ng-click="func.cardCancelOpera()">取消操作</button>
+			</li>
+			<!--<li>
+				<button class="btn blue" ng-click="func.cardCloseDevice()">关闭设备</button>
+			</li>-->
+		</ul>
+	</div>
+
+    <div class="blueLine mb"></div>
+	<!--下层-->
+	<div class="oneTop">
+		<ul>
+			<li>
+				<button class="btn blue" ng-click="func.cardReadMsg()">读取卡片数据</button>
+			</li>
+			<li>
+				<button class="btn blue" ng-click="func.cardApdu()">执行apdu</button>
+			</li>
+			<li>
+				<button class="btn blue" ng-click="func.cardWriteCard()">写卡</button>
+			</li>
+			<li>
+				<button class="btn blue" ng-click="func.cardExitCard()">退卡</button>
+			</li>
+			<li>
+				<button class="btn blue" ng-click="func.cardEatCard()">吞卡</button>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<!--IDcardReader-->
+<div class="btntwo" ng-show="funcDeviceFlag == 1">
+	<!--上层-->
+	<div class="blueLine mb"></div>
+	<div class="oneTop">
+		<ul>
+			<!--<li>
+				<button class="btn blue" ng-click="func.idOpen()">打开设备</button>
+			</li>-->
+			<!--<li>
+				<button class="btn blue" ng-click="func.idReset()">复位读卡器</button>
+			</li>-->
+			<!--<li>
+				<button class="btn blue" ng-click="func.idResetEat()">复位吞卡数</button>
+			</li>-->
+			<li>
+				<button class="btn blue" ng-click="func.idGetStatus()">获取设备状态</button>
+			</li>
+			<!--<li>
+				<button class="btn blue" ng-click="func.idCancelOpera()">取消操作</button>
+			</li>-->
+			<!--<li>
+				<button class="btn blue" ng-click="func.idCloseDevice()">关闭设备</button>
+			</li>-->
+		</ul>
+	</div>
+
+	<!--下层-->
+	<div class="blueLine mb"></div>
+	<!--上层-->
+	<div class="oneTop">
+		<ul>
+			<li>
+				<button class="btn blue" ng-click="func.idReadMsg()">读取卡片数据</button>
+			</li>
+			<!--<li>
+				<button class="btn blue" ng-click="func.idApdu()">执行apdu</button>
+			</li>-->
+			<!--<li>
+				<button class="btn blue" ng-click="func.idWriteCard()">写卡</button>
+			</li>-->
+			<!--<li>
+				<button class="btn blue" ng-click="func.idExitCard()">退卡</button>
+			</li>-->
+			<!--<li>
+				<button class="btn blue" ng-click="func.idEatCard()">吞卡</button>
+			</li>-->
+		</ul>
+	</div>
+</div>
+
+<!--PTR-->
+<div class="btnthree" ng-show="funcDeviceFlag == 2">
+	<!--上层-->
+<!--	<div class="blueLine mb"></div>-->
+	<div class="oneTop">
+		<ul>
+			<!--<li>
+				<button class="btn blue" ng-click="func.ptrOpen()">打开设备</button>
+			</li>
+			<li>
+				<button class="btn blue" ng-click="func.ptrReset()">复位打印机</button>
+			</li>-->
+			<!--<li>
+				<button class="btn blue" ng-click="func.ptrGetStatus()">获取设备状态</button>
+			</li>
+			<li>
+				<button class="btn blue" ng-click="func.ptrCancel()">取消操作</button>
+			</li>
+			<li>
+				<button class="btn blue" ng-click="func.ptrClose()">关闭设备</button>
+			</li>-->
+		</ul>
+	</div>
+
+	<!--中层-->
+<!--	<div class="blueLine mb"></div>-->
+	<!--<div class="oneTop">
+		<ul>
+			<li>
+				<button class="btn blue" ng-click="func.ptrSetWord()">设置字体（非WOSA）</button>
+			</li>
+			<li>
+				<button class="btn blue" ng-click="func.ptrSetBold()">设置粗体（非WOSA）</button>
+			</li>
+			<li>
+				<button class="btn blue" ng-click="func.ptrExit()">退纸/折</button>
+			</li>
+			<li>
+				<button class="btn blue" ng-click="func.ptrCutPaper()">切纸</button>
+			</li>
+		</ul>
+	</div>-->
+	<!--中层-->
+    <div class="blueLine mb"></div>
+	<!--下层-->
+	<div class="oneTop">
+		<ul>
+			<li>
+				<button class="btn blue" ng-click="func.ptrPrintMsg()">打印行数据</button>
+			</li>
+			<li>
+				<button class="btn blue" ng-click='func.ptrFormP()'>Form打印</button>
+			</li>
+			<!--<li>
+				<button class="btn blue" ng-click='func.ptrPrintImg()'>打印位图（非WOSA）</button>
+			</li>-->
+			<li>
+				<button class="btn blue" ng-click="func.ptrPrintMa()">打印条码（非WOSA）</button>
+			</li>
+			<li>
+				<button class="btn blue" ng-click = "func.ptrReadC()">读存折</button>
+			</li>
+			<li>
+				<button class="btn blue" ng-click = "func.ptrWrite()">写存折磁道</button>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<!-- 指纹开始 -->
+<div class="fingers" ng-show="funcDeviceFlag == 3">
+	<div class="fingers-option1">
+		<button class="fingers-option1__openDevice" ng-click="func.fingersOpenDevice()">打开设备</button>
+		<button class="fingers-option1__reset" ng-click="func.fingersReset()">复位指纹仪</button>
+		<button class="fingers-option1__acquisitionStatus" ng-click="func.fingersAcquisitionStatus()">获取设备状态</button>
+		<button class="fingers-option1__cancelOption" ng-click="func.fingersAancelOption()">取消操作</button>
+		<button class="fingers-option1__closeDevice" ng-click="func.fingersCloseDevice()">关闭设备</button>
+	</div>
+	<div class="fingers-option2">
+		<button class="fingers-option2__getFormwork" ng-click="func.getFormwork()">获取指纹模板</button>
+		<button class="fingers-option2__getFeature" ng-click="func.getFeature()">获取指纹特征码</button>
+		<button class="fingers-option2__fingerMatching" ng-click="func.fingerMatching()">指纹匹配</button>
+	</div>
+</div>
+<!-- 指纹结束 -->
+
+<div class="pinpad" ng-if="funcDeviceFlag == 4">
+	<div class="pinpad-option1">
+		<button class="pinpad-option1__openDevice" ng-click="func.pinpadOpenDevice()">打开设备</button>
+		<button class="pinpad-option1__resetPass" ng-click="func.resetPass()">复位密码键盘</button>
+		<button class="pinpad-option1__acquisitionStatus" ng-click="func.pinpadAcquisitionStatus()">获取设备状态</button>
+		<button class="pinpad-option1__cancelOption" ng-click="func.pinpadCancelOption()">取消操作</button>
+		<button class="pinpad-option1__closeDevice" ng-click="func.pinpadCloseDevice()">关闭设备</button>
+	</div>
+	<div class="pinpad-option2">
+		<button class="pinpad-option2__secret" ng-click="func.pinpadSecret()">下载主密钥</button>
+		<button class="pinpad-option2__workSecret" ng-click="func.pinpadWorkSecret()">下载工作秘钥</button>
+	</div>
+	<div class="pinpad-option3">
+		<button class="pinpad-option3__clearInput" ng-click="func.clearInput()">明文输入</button>
+		<button class="pinpad-option3__PassInput" ng-click="func.PassInput()">启用密码输入</button>
+		<button class="pinpad-option3__getPinBlock" ng-click="func.getPinBlock()">获取PinBlock</button>
+	</div>
+	<div class="pinpad-option4">
+		<button class="pinpad-option4__desEncrypt" ng-click="func.desEncrypt()">des加密</button>
+		<button class="pinpad-option4__desDecrypt" ng-click="func.desDecrypt()">des解密</button>
+		<button class="pinpad-option4__computeMAC" ng-click="func.computeMAC()">计算MAC</button>
+	</div>
+</div>
+
+<!-- 相机开始 -->
+<div class="cameras" ng-show="funcDeviceFlag == 5">
+	<!--<div class="cameras-option1">
+		<button class="cameras-option1__openDevice" ng-click="func.camerasOpenDevice()">打开设备</button>
+		<button class="cameras-option1__resetCamera" ng-click="func.resetCamera()">复位摄像头</button>
+		<button class="cameras-option1__acquisitionStatus" ng-click="func.camerasAcquisitionStatus()">获取设备状态</button>
+		<button class="cameras-option1__cancelOption" ng-click="func.camerasCancelOption()">取消操作</button>
+		<button class="cameras-option1__closeDevice" ng-click="func.camerasCloseDevice()">关闭设备</button>
+	</div>-->
+	<div class="cameras-option2">
+		<button class="cameras-option2__takePhoto" ng-click="func.takePhoto()">拍照</button>
+		<button class="cameras-option2__preview" ng-click="func.preView()">预览</button>
+	</div>
+</div>
+<!-- 相机结束 -->
+<div  ng-include="'tpl/footer.html'" ng-click="backhome()" ng-controller="dash_controller" class="container" ></div>

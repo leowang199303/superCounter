@@ -1,0 +1,14 @@
+
+
+
+
+
+
+<!-- 授权方式结束 -->
+
+
+<!-- 输入新密码结束 -->
+<div class="openCardFooter">
+	<div ng-include="'tpl/timer.html'" id="openCardTimer" ng-if="countOwnFlag == 0"></div>
+	<div ng-include="'tpl/footer.html'" ng-click="countOwn.clean()"></div>
+</div>

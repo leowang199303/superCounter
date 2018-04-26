@@ -1,0 +1,486 @@
+<div class="bgC" ng-if="phoneBankPage == 0">
+	<div class="tipsCard">
+		<div class="bankCard">
+			请插入您的银行卡
+		</div>
+		<div class="cardPosion">
+
+		</div>
+		<div class="readCard">
+			银行卡读取中。。。
+		</div>
+	</div>
+</div>
+
+<div class="bgC phone-bank-page" ng-if="phoneBankPage == 1">
+	
+	<div class="phone-bank-password clearfix">
+		<div class="count_own_head">
+			<span class="count-own_tips">卡号</span>
+			<span class="count-own-card-num">{{bankCardNum}}</span>
+	</div>
+		<div class="phone-bank-password-top">
+			<sapn class="wordsStyle">
+				请输入密码<span style="color: red;">*</span>：
+			</sapn>
+		</div>
+		<div class="phone-bank-password-bottom">
+			<input type="password" autocomplete="new-password" ng-change="phoneBankObj.checkCardPwd()" ng-model="tss.BankCardPwd" />
+			<p class="red phone-bank-input-tips" ng-if="isRight">{{isCardPwd}}</p>
+		</div>
+
+	</div>
+	<div class="phone-bank-pwd-sure">
+		<button class="btn blue" type="button" ng-click="phoneBankObj.pwdMakeSure()">确定</button>
+	</div>
+</div>
+
+<div class="bgC phone-bank-page" ng-if="phoneBankPage == 2">
+	<p class="phone-bank-func">选择交易功能</p>
+	<div class="phone-bank-items clearfix">
+		<div class="phone-bank-item-left">
+			<div class="phone-bank-item" ng-click="phoneBankObj.funChose(1,1)">手机签约</div>
+			<div class="phone-bank-item" ng-click="phoneBankObj.funChose(2)">密码重置</div>
+		</div>
+		<div class="phone-bank-item-right">
+			<div class="phone-bank-item" ng-click="phoneBankObj.funChose(3)">信息修改</div>
+			<div class="phone-bank-item" ng-click="phoneBankObj.funChose(4)">账户维护</div>
+		</div>
+	</div>
+</div>
+
+<div class="bgC" ng-if="phoneBankPage == 3">
+	<div class="tipsCard">
+		<div class="bankCard">
+			请将您的身份证放在指定位置
+		</div>
+		<div class="cardPosion">
+
+		</div>
+		<div class="readCard">
+			身份证读取中。。。
+		</div>
+	</div>
+
+</div>
+
+<div class="bgC" ng-if="phoneBankPage == 4">
+	<div ng-if="phoneBankFunc == 4" class="phone-bank-agreement">
+		<div class="phone-bank-agreement-content">这里是协议</div>
+		<div class="phone-bank-agreement-btn">
+			<button class="btn blue" type="button" ng-click="phoneBankObj.agreement()">同意</button>
+		</div>
+		<div class="backbtn backcardPhoto">
+			<a href="javascript:;" class="btn2" ng-click="phoneBankObj.backToFunc()">
+				<i class="fa fa-arrow-circle-left fa-3x"></i>
+				<div  style="margin-top: 10px;">
+					上一步
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div ng-if="phoneBankFunc == 5" class="phone-bank-Card-pwd">
+		<p class="phone-bank-setPWD">设置手机银行密码</p>
+		<div class="phone-bank-Input">
+			<div class="phone-bank-set-pwd clearfix">
+				<div class="phone-bank-set-pwd-top">
+					<p class="wordsStyle">设置密码<span style="color: red;">*</span>：</p>
+				</div>
+				<div class="phone-bank-set-pwd-bottom">
+					<input type="password" ng-model="tss.phoneBankPwd" autocomplete="new-password" ng-change="phoneBankObj.setPwdInput()" />
+					<p style="color: red;margin-top: 10px;margin-bottom: 0px;" ng-if="phoneBankPwd">请输入六位数字</p>
+				</div>
+			</div>
+
+			<div class="clearfix">
+				<div class="phone-bank-set-pwd-top">
+					<p class="wordsStyle">确认密码<span style="color: red;">*</span>：</p>
+				</div>
+
+				<div class="phone-bank-set-pwd-bottom">
+					<input type="password" ng-model="tss.phoneBankPwdAgain" autocomplete="new-password" ng-change="phoneBankObj.setPwdInputAgain()" />
+					<p style="color: red;margin-top: 10px;margin-bottom: 0px;" ng-if="phoneBankPwdAgain">{{phoneMsgTh}}</p>
+				</div>
+
+			</div>
+		</div>
+		<div class="phone-bank-setPWD-btn">
+			<button class="btn blue" type="button" ng-click="phoneBankObj.finishSetPwd()">确定</button>
+		</div>
+		<div class="backbtn backcardPhoto">
+			<a href="javascript:;" class="btn2" ng-click="phoneBankObj.backToFunc()">
+				<i class="fa fa-arrow-circle-left fa-3x"></i>
+				<div style="margin-top: 10px;">
+					返回菜单
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="bgC" ng-if="phoneBankPage == 5">
+	<div ng-if="phoneBankFunc == 6" class="phone-bank-go-sign">
+		<p class="phone-bank-go-sign-title">您还没有进行手机签约，请前去签约</p>
+		<div class="phone-bank-go-sign-btn">
+			<button class="btn blue" type="button" ng-click="phoneBankObj.funChose(1,2)">去签约</button>
+		</div>
+	</div>
+
+	<div ng-if="phoneBankFunc == 7" class="phone-bank-reset">
+		<p class="phone-bank-setPWD">重置手机银行密码</p>
+		<div class="phone-bank-reset-div">
+
+			<div class="clearfix">
+				<div class="phone-bank-set-pwd-top">
+					<p class="wordsStyle">重置密码<span style="color: red;">*</span>：</p>
+				</div>
+				<div class="phone-bank-set-pwd-bottom">
+					<input type="password" ng-model="tss.newPwd" ng-change="phoneBankObj.resetPwd()" />
+					<br />
+					<p style="color: red;margin-top: 10px;margin-bottom: 0px;" ng-if="newPwd">请输入6位数字</p>
+				</div>
+			</div>
+
+			<div class="clearfix">
+				<div class="phone-bank-set-pwd-top">
+					<p class="wordsStyle">确认密码<span style="color: red;">*</span>：</p>
+				</div>
+				<div class="phone-bank-set-pwd-bottom">
+					<input type="password" ng-model="tss.newPwdAgain" ng-change="phoneBankObj.resetPwdAgain()" />
+					<p style="color: red;margin-top: 10px;margin-bottom: 0px;" ng-if="newPwdAgain">{{phoneMsgTwo}}</p>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="phone-bank-reset-btn">
+			<button class="btn blue" type="button" ng-click=" phoneBankObj.finishReset()">确定</button>
+		</div>
+
+	</div>
+</div>
+
+<div class="bgC hhOne" ng-if="phoneBankPage == 6">
+	<div class="productinnet-phone">
+		<h1 class="producttext-phone">手机银行</h1>
+	</div>
+	
+	<div class="phone-bank-sign-content">
+		<div class="switch clearfix" ng-repeat="o in options" ng-init="outerIndex = $index">
+			<div class="switchLeft">{{o.optionName}}</div>
+			<div class="switchRight myswitch" >
+                <input type="checkbox" value="{{o.optionName}}"  class="chec_{{outerIndex}}" data-size="mini" data-on-text="<i class='glyphicon glyphicon-ok'></i>" data-off-text="<i></i>">
+            </div>
+        	<div class="phone-bank-none limit_{{outerIndex}}">
+        		<br />
+        		<div ng-repeat="p in pays" class="clearfix phone-bank-sign-count" ng-init="inerIndex = $index">
+        			<div class="switchLeft">
+        				{{p.payOption}}：
+        				<p style="color:red;display: none;" class="oneShow_{{outerIndex}}_{{inerIndex}}">请输入数字</p>
+        			</div>
+        			<div class="switchRight">
+        				<input type="text" class="one_{{outerIndex}}_{{inerIndex}}" value="{{p.optionName}}"/>
+        			</div>       			
+        		</div>
+        		<br />       		
+        	</div>   
+<script>
+//    $('.myswitch input').bootstrapSwitch('state');
+		var productw = JSON.parse(sessionStorage.getItem("phoneBank"));
+		var userSelectProcduct = JSON.parse(sessionStorage.getItem("userSelectProcduct"))
+		$(".myswitch input").on('switchChange.bootstrapSwitch', function(event, state) {
+			var product = $(this).attr('value');
+			var className = $(this).attr("class");
+			var classNameKey = className.split('_');
+			console.log(classNameKey)
+            if(state){
+            	if(product.indexOf("限额")>=0){
+            		$(".limit_"+classNameKey[1]).css('display','block');
+            	}
+            	if(!$(".chec_0").bootstrapSwitch('state')) { //check if is not checked
+					$('.chec_0').bootstrapSwitch('toggleState'); //change the checkbox state
+				}
+            	
+            	//修改里面的属性为true
+            	for (var i = 0; i < userSelectProcduct.length; i++) {
+            		for (var o = 0; o < userSelectProcduct[i].option.length; o++) {
+            			if(classNameKey[1] == o){
+            				userSelectProcduct[i].option[o].isOpen = true;
+            			}
+            		}
+            	}
+            	
+            }else{
+            	if(product.indexOf("限额")>=0){
+            		$(".limit_"+classNameKey[1]).css('display','none');
+            	}
+//          	$('.chec_' + classNameKey[1]).bootstrapSwitch('toggleState')
+            	if(classNameKey[1] == 0){ //if it is the first close
+            		console.log("关的是首选项")
+            		
+            		for (var c = 0; c < productw.length; c++) {      			
+            			if($('.chec_' + c).bootstrapSwitch('state')) {
+							$('.chec_' + c).bootstrapSwitch('toggleState')
+						}
+            		}
+            	}
+            	
+            	//设置被选中的为false
+            	for (var i = 0; i < userSelectProcduct.length; i++) {
+            		for (var o = 0; o < userSelectProcduct[i].option.length; o++) {
+            			
+            			if(classNameKey[1] == 0){
+            				userSelectProcduct[i].option[o].isOpen = false;
+            			}else if(classNameKey[1] == o){
+            				userSelectProcduct[i].option[o].isOpen = false;
+            			}
+            		}
+            	}
+            }
+            
+            sessionStorage.setItem("userSelectProcductOne",JSON.stringify(userSelectProcduct));
+		})
+	</script>
+		</div>		
+	</div>
+
+	<div class="phone-bank-msg-change-btn">
+		<button class="btn blue" type="button" ng-click=" phoneBankObj.finishMsgChange()">确定</button>
+	</div>
+	
+	<div class="backbtn backcardPhoto">
+			<a href="javascript:;" class="btn2" ng-click="phoneBankObj.backToFunc()">
+				<i class="fa fa-arrow-circle-left fa-3x"></i>
+				<div style="margin-top: 10px;">
+					返回菜单
+				</div>
+			</a>
+		</div>
+</div>
+
+<div class="bgC" ng-if="phoneBankPage == 7">
+	<div class="phone-bank-count-change">
+		签约账户维护
+	</div>
+	<div class="phone-bank-count-change-btn">
+		<button class="btn blue" type="button" ng-click="  phoneBankObj.finishCountChange ()">确定</button>
+	</div>
+	<div class="backbtn backcardPhoto">
+			<a href="javascript:;" class="btn2" ng-click="phoneBankObj.backToFunc()">
+				<i class="fa fa-arrow-circle-left fa-3x"></i>
+				<div style="margin-top: 10px;">
+					返回菜单
+				</div>
+			</a>
+		</div>
+</div>
+
+<div class="bgC phone-bank-get-msg" ng-if="phoneBankPage == 8">
+	<p class="phone-bank-get-msg-title">手机验证码验证</p>
+	<div class="phone-bank-get-msg-content ">
+		<div class="clearfix">
+
+			<div class="phone-bank-password-top">
+				<p class="wordsStyle">手机号<span style="color: red;">*</span>：</p>
+			</div>
+
+			<div class="phone-bank-set-pwd-bottom">
+				<input type="text" ng-change="phoneBankObj.telNumTest()" ng-model="tss.phoneBankTelNum" />
+				<br />
+				
+			</div>
+
+		</div>
+
+		<div class="clearfix">
+			<div class="phone-bank-password-top">
+				<p class="wordsStyle">验证码<span style="color: red;">*</span>：</p>
+			</div>
+			<div class="phone-bank-set-pwd-bottom">
+				<input type="text" ng-model="tss.MsgCode" />
+				<p style="color: red;margin-top: 10px;margin-bottom: 0px;" ng-if="isRightTelNum">请输入正确得手机号</p>
+			</div>
+			<button class="getMsgCode btn blue" ng-click="phoneBankObj.getMsgCodeTel()" ng-disabled="isDisabledz">{{title1}}</button>
+		</div>
+
+	</div>
+	<div class="phone-bank-get-msg-btn">
+		<button type="button" class="btn blue" ng-click="phoneBankObj.setPwd()">确认</button>
+	</div>
+</div>
+
+<div class="bgC phone-bank-test" ng-if="phoneBankPage == 9">
+	<p class="phone-bank-test-title">柜员验证</p>
+	<div class="phone-bank-test-input">
+		<div class="clearfix">
+			<div class="phone-bank-set-pwd-top">
+				<p class="wordsStyle">账号：</p>
+			</div>
+			<div class="phone-bank-set-pwd-bottom">
+				<input type="text" ng-model="tss.memberCount" />
+			</div>
+
+		</div>
+
+		<div class="clearfix">
+			<div class="phone-bank-set-pwd-top">
+				<p class="wordsStyle">密码：</p>
+			</div>
+			<div class="phone-bank-set-pwd-bottom">
+				<input type="password" autocomplete="new-password" ng-model="tss.memberPwd" />
+			</div>
+
+		</div>
+	</div>
+	<div class="phone-bank-test-btn">
+		<button type="button" class="btn blue" ng-click="phoneBankObj.finishTest()">确定</button>
+	</div>
+</div>
+
+<div class="bgC phone-bank-sign" ng-if="phoneBankPage == 10" id="domeId">
+	<p class="phone-bank-sign-title">客户签名</p>
+	<div class="phone-bank-sign-content clearfix">
+		<div id="demo" class="js-signature" data-width="300" data-height="300" data-border="1px solid #ccc" data-line-color="black" data-auto-fit="true"></div>
+		<div id="btnCancelPhone">
+			<button type="button" class="btn blue" ng-click="phoneBankObj.cancelSign()">撤销</button>
+		</div>
+	</div>
+	<div class="phone-bank-sign-btn">
+		
+		<button type="button" class="btn blue" ng-click="phoneBankObj.finishSign()">确定</button>
+	</div>
+</div>
+
+<div class="bgC phone-bank-end" ng-if="phoneBankPage == 11">
+	<p class="phone-bank-end-title">
+		{{endTips}}
+	</p>
+	
+	<div ng-include="'tpl/finishBottom.html'" id="finishBottom">
+        	
+    </div>
+</div>
+
+<div class="bgC phone-bank-end" ng-if="phoneBankPage == 12">
+	<p class="phone-bank-end-title">
+		您已签约手机银行
+	</p>
+	<div style="text-align:center" ng-click="phoneBankObj.signArealday()" class="phone-bank-end-btn">
+		<i class="fa fa-arrow-circle-right fa-3x"></i>
+		<div class="advertext">返回菜单页</div>
+	</div>
+</div>
+
+<div class="bgC hhOne" ng-if="phoneBankPage == 13">
+	<div class="productinnet-phone">
+		<h1 class="producttext-phone">手机银行签约</h1>
+	</div>
+	
+	<div class="phone-bank-sign-content">
+		<div class="switch clearfix" ng-repeat="o in optionsOne" ng-init="outerIndex = $index">
+			<div class="switchLeft">{{o.optionName}}</div>
+			<div class="switchRight switchOne" >
+                <input type="checkbox" value="{{o.optionName}}"  class="checOne_{{outerIndex}}" data-size="mini" data-on-text="<i class='glyphicon glyphicon-ok'></i>" data-off-text="<i></i>">
+            </div>
+        	<div class="phone-bank-none limitOne_{{outerIndex}}">
+        		<br />
+        		<div ng-repeat="p in paysOne" class="clearfix phone-bank-sign-count" ng-init="inerIndex = $index">
+        			<div class="switchLeft">
+        				{{p.payOption}}：
+        				<p style="color:red;display: none;" class="oneShow_{{outerIndex}}_{{inerIndex}}">请输入数字</p>
+        			</div>
+        			<div class="switchRight">
+        				<input type="text" class="one_{{outerIndex}}_{{inerIndex}}" value="{{p.optionName}}"/>
+        			</div>       			
+        		</div>
+        		<br />       		
+        	</div>   
+<script>
+        var productFirst = JSON.parse(sessionStorage.getItem("productOne"));
+        $(".phone-bank-msg-change-btn-one").css("display","none");
+		$(".switchOne input").on('switchChange.bootstrapSwitch', function(event, state) {
+			var product = $(this).attr('value');
+			var className = $(this).attr("class");
+			var classNameKey = className.split('_');
+			console.log(classNameKey)
+            if(state){
+            	if(product.indexOf("限额")>=0){
+            		$(".limitOne_"+classNameKey[1]).css('display','block');
+            	}
+            	if(!$(".checOne_0").bootstrapSwitch('state')) { //check if is not checked
+					$('.checOne_0').bootstrapSwitch('toggleState'); //change the checkbox state
+				}
+            	
+            	if(classNameKey[1] == 0){ 
+            	  $(".phone-bank-msg-change-btn-one").css("display","block")
+            	}
+            	
+            	//修改里面的属性为true
+            	for (var i = 0; i < productFirst.length; i++) {
+            		for (var o = 0; o < productFirst[i].option.length; o++) {
+            			if(classNameKey[1] == o){
+            				productFirst[i].option[o].isOpen = true;
+            			}
+            		}
+            	}
+            	
+            }else{
+            	if(product.indexOf("限额")>=0){
+            		$(".limitOne_"+classNameKey[1]).css('display','none');
+            	}
+//          	$('.chec_' + classNameKey[1]).bootstrapSwitch('toggleState')
+            	if(classNameKey[1] == 0){ //if it is the first close
+            		$(".phone-bank-msg-change-btn-one").css("display","none")
+            		for (var c = 0; c < productFirst.length; c++) { 
+            			for (var o = 0; o <productFirst[c].option.length; o++) {
+            				 
+            					if($('.checOne_' + o).bootstrapSwitch('state')) {
+									$('.checOne_' + o).bootstrapSwitch('toggleState')
+						        }
+            				
+            			}
+            			
+            		}
+            	}
+            	
+            	//设置被选中的为false
+            	for (var i = 0; i < productFirst.length; i++) {
+            		for (var o = 0; o < productFirst[i].option.length; o++) {           			
+            			if(classNameKey[1] == 0){
+            				productFirst[i].option[o].isOpen = false;
+            			}else if(classNameKey[1] == o){
+            				productFirst[i].option[o].isOpen = false;
+            			}
+            		}
+            	}
+            }
+            
+            console.log(productFirst)
+            sessionStorage.setItem("productFirstNed",JSON.stringify(productFirst));
+		})
+	</script>
+		</div>		
+	</div>
+
+	<div class="phone-bank-msg-change-btn">
+		<button class="btn blue" type="button" ng-click=" phoneBankObj.finishChose()">确定</button>
+	</div>
+	
+	<div class="backbtn backcardPhoto">
+		<a href="javascript:;" class="btn2" ng-click="phoneBankObj.backToFunc()">
+			<i class="fa fa-arrow-circle-left fa-3x"></i>
+			<div style="margin-top: 10px;">
+				返回菜单
+			</div>
+		</a>
+	</div>
+	
+	
+</div>
+
+<div class="openCardFooter">
+	<div ng-include="'tpl/timer.html'" id="openCardTimer" ng-if="phoneBankPage == 0 || phoneBankPage == 3 || phoneBankPage == 11"></div>
+	<div ng-include="'tpl/footer.html'" ng-click="phoneBankObj.clean()"></div>
+</div>
+<script type="text/javascript" src="./assets/plugins/jq-signature.js"></script>

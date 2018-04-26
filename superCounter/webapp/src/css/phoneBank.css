@@ -1,0 +1,232 @@
+.phon_bank_style{
+	background-color: #fff;
+    height: 730px;
+    width: 85%;
+    margin: 0 auto;
+    overflow: auto;
+    position: relative;
+    padding-top: 25px;
+}
+.phone-bank-password{
+	height: 100px;
+	margin:315px  auto 0 384px;
+	position: absolute;
+}
+.phone-bank-page{
+	position: relative;
+}
+.phone-bank-pwd-sure{
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	bottom: 50px;
+}
+.phone-bank-items{
+	width:500px;
+	height:auto;
+	margin:  220px  auto 0 294px;
+	text-align: center;
+	/*margin-top: 315px;*/
+	position: absolute;
+	/*border: 1px solid black;*/	
+}
+.phone-bank-item{
+	text-align: center;
+	margin-bottom: 50px;
+	width: 150px;
+	height:70px;
+	line-height: 70px;
+	font-size: 25px;
+	font-weight: bold;
+	color: white;
+	background-color: #293c8f;
+	border-radius: 10%;
+}
+.phone-bank-item-left{
+	float: left;
+}
+.phone-bank-item-right{
+	float: right;
+}
+.phone-bank-func{
+	text-align: center;
+	font-size: 30px;
+}
+.phone-bank-agreement{
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+.phone-bank-agreement-content{
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+}
+.phone-bank-agreement-btn{
+	position: absolute;
+	bottom: 50px;
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+}
+.phone-bank-setPWD{
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 30px;
+}
+.phone-bank-Card-pwd{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.phone-bank-Input div,
+.phone-bank-reset-div div{
+	margin-top: 25px;
+}
+.phone-bank-Input,
+.phone-bank-reset-div,
+.phone-bank-get-msg-content{
+	width:380px;
+	margin: 150px auto 0 auto;
+	height: auto;
+	position: relative;
+}
+.phone-bank-setPWD-btn,
+.phone-bank-reset-btn{
+	width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 50px;
+}
+.phone-bank-get-msg-btn{
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	bottom: 50px;
+}
+.phone-bank-get-msg{
+	position: relative;
+}
+.phone-bank-test-title,
+.phone-bank-sign-title,
+.phone-bank-msg-change,
+.phone-bank-count-change,
+.phone-bank-get-msg-title{
+	width: 100%;
+	text-align: center;
+	font-size: 30px;
+}
+.phone-bank-test-input div,
+.phone-bank-get-msg-content div{ 
+	margin-bottom:20px;
+}
+.phone-bank-test{
+	position: relative;
+}
+.phone-bank-test-input{
+	/*position: absolute;*/
+	width:300px;
+	margin: 300px auto 0 auto;
+	margin-top: 300px;
+	text-align:center ;
+}
+.phone-bank-test-btn,
+.phone-bank-sign-btn,
+.phone-bank-end-btn,
+.phone-bank-go-sign-btn,
+.phone-bank-msg-change-btn,
+.phone-bank-count-change-btn{
+	position: absolute;
+	bottom: 50px;
+	width: 100%;
+	text-align: center;
+}
+.phone-bank-sign-content{
+	width: 400px;
+	height: 300px;
+	margin: 0 auto;
+	/*border: 1px solid black;*/
+}
+#img{
+	height: 50px;
+	width: 50px;
+}
+.phone-bank-end-title,
+.phone-bank-go-sign-title{
+	width: 100%;
+	text-align: center;
+	font-size: 35px;
+	margin-top:300px;
+}
+.phone-bank-end{
+	position: relative;
+}
+.red{
+	color: red;
+	position: relative;
+}
+.getMsgCode{
+	float: right;
+}
+.btnShow{
+	display:block;
+}
+.btnHide{
+	display: none;
+}
+.phone-bank-password-top,
+.phone-bank-set-pwd-top{
+	float: left;
+	margin-top: 4px;	
+}
+.phone-bank-password-bottom,
+.phone-bank-set-pwd-bottom{
+	margin-left: 20px;
+	float: left;
+}
+.phone-bank-input-tips{
+	margin-top: 10px;
+}
+#btnCancelPhone{
+	margin-top: 20px;
+	float: right;
+}
+.phone-bank-sign-content{
+	width: 30%;
+	margin: 0 auto;
+}
+.phone-bank-sign-count{
+	margin-top: 40px;
+}
+.productinnet-phone{
+    border: 1px solid #ccc;
+    width: 300px;
+    margin: 0 auto;
+    border-radius: 10%;
+    min-height: 150px;	
+}
+.producttext-phone{
+    line-height: 180px;
+    text-align: center;
+}
+.phone-bank-none{
+	display: none;
+}
+.count_own_head{
+	text-align: left;
+	margin-bottom:40px;
+}
+.count-own_tips{
+	font-size: 25px;
+	color: #5F6165;
+}
+.count-own-card-num{
+	font-size: 26px;
+	margin-left: 15px;
+	color: #AD7B04;
+}
+#finishBottom{
+	position: absolute;
+	bottom: 0px;
+}

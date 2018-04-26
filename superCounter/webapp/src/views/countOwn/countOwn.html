@@ -1,0 +1,310 @@
+<br />
+	
+<!-- 刷介质认证开始 -->
+<div ng-show="countOwnFlag == 0" class="bgC">
+	
+	<div class="tipsCard">
+		<div class="bankCard">
+			请插入您的银行卡
+		</div>
+		<div class="cardPosion">
+
+		</div>
+		<div class="readCard">
+			银行卡读取中。。。
+		</div>
+	</div>
+	
+</div>
+<!-- 刷介质认证结束 -->
+<div id="mask" class="mask">
+
+</div>
+
+<!-- 录入密码开始 -->
+<div class="count-own-pwd bgc">
+
+	<div class="password clearfix">
+		<div class="count_own_head">
+			<span class="count-own_tips">卡号</span>
+			<span class="count-own-card-num">{{bankCardNum}}</span>
+		</div>
+		
+		<div class="count-own-tips">
+			<span class="wordsStyle">请输入密码<span style="color: red;">*</span>：</span>
+		</div>
+		<div class="count-own-number">
+			<input type="password" class="inputWidths" ng-change="countOwn.checkPassword()" ng-model="countOwn.cardPwd" autocomplete="new-password" />
+			<br />
+			<p style="color: red;margin-top: 10px;margin-bottom: 0px;" ng-if="isPwd">{{errorMsg}}</p>
+		</div>
+
+		<!--  </label>-->
+		<br />
+		<div class="forget-pass" ng-click="forgetPass(1)">
+           <h5>忘记密码</h5> 
+        </div>
+	</div><br/>
+	<div class="option" ng-click="countOwn.checkPwdIsright(countOwnFlag)">
+		<button class="certification btn blue btnStyle" type="button">下一步</button>
+	</div>	
+</div>
+<div class="page-own__password bgC" ng-if="countOwnFlag == 1">
+
+</div>
+<!-- 录入密码结束 -->
+
+<!-- 卡片信息展示开始 -->
+<div ng-if="countOwnFlag == 2" class="bgC">
+	<div class="card-inform">
+		<h3>开户行：{{trcmCardInstCode}}</h3>
+		<div class="card-inform__option">
+			<label class="input-cardNumber">
+                <strong>卡号：&nbsp;</strong>{{bankCardNum}}&nbsp;
+                <strong ng-click="forgetPass(2)">修改密码</strong>
+            </label>
+			<h4>广州银行借记卡金卡，您卡上余额为 {{count}} 元</h4>
+			<!--<h4>当月卡收益+count元，当月卡支出-count元</h4><br />-->
+			<form action="" method="get">
+				<label><input name="bill" type="radio" value="month" checked="checked" ng-click="countOwn.moneyDetail(event)"/>当月</label>
+				<label><input name="bill" type="radio" value="season" ng-click="countOwn.moneyDetail(event)"/>当季</label>
+				<label><input name="bill" type="radio" value="3" ng-click="countOwn.moneyDetail(event)"/>近3笔</label>
+				<label><input name="bill" type="radio" value="10" ng-click="countOwn.moneyDetail(event)"/>近10笔</label>
+			</form>
+			<button class="btn blue" id="pintDeail">打印明细</button>
+			<br />
+		</div>
+	</div>
+	<table border="1" id="streamHeig">
+		<tr>
+			<!--<td width="20%">交易流水</td>-->
+			<!--<td width="20%">服务流水</td>-->
+			<td style="width: 150px;">渠道号</td>
+			<!--<td width="20%">交易日期</td>-->
+			<!--<td width="20%">柜员</td>-->
+			<!--<td width="20%">机构号</td>-->
+			<!--<td width="20%">交易代码</td>-->
+			<!--<td width="20%">贷方账号</td>-->
+			<!--<td width="20%">借方账号</td>-->
+			<!--<td width="20%">客户账号</td>-->
+			<td  style="width: 150px;">币种</td>
+			<!--<td width="20%">凭证号码</td>-->
+			<!--<td width="20%">现金标志</td>-->
+			<td  style="width: 150px;">交易金额</td>
+			<td  style="width: 150px;">开始时间</td>
+			<!--<td width="20%">结束时间</td>-->
+			<td  style="width: 150px;">交易状态</td>
+			<td  style="width: 150px;">交易简介</td>
+			<!--<td width="20%">更新时间</td>-->
+			<!--<td width="20%">上下文标志</td>-->
+		</tr>
+		<tr ng-repeat="s in streams">
+			<!--<td width="20%">{{s.TRANS_SERIAL_NO}}</td>
+			<td>{{s.SERVICE_SERIAL_NO}}</td>-->
+			<td>{{s.CHANNEL_CODE}}</td>
+			<!--<td>{{s.TRANS_DATE}}</td>
+			<td>{{s.TELLER_CODE}}</td>
+			<td>{{s.ORG_CODE}}</td>
+			<td>{{s.TRANS_CODE}}</td>
+			<td>{{s.DEBIT_ACCTNO}}</td>
+			<td>{{s.CREDIT_ACCTNO}}</td>
+			<td>{{s.CUST_NO}}</td>-->
+			<td>{{s.CUR_CODE}}</td>
+			<!--<td>{{s.VOUCH_NO}}</td>
+			<td>{{s.CASH_FLAG}}</td>-->
+			<td>{{s.TRANS_AMT}}</td>
+			<td>{{s.START_TIME}}</td>
+			<!--<td>{{s.END_TIME}}</td>-->
+			<td>{{s.TRANS_STATE}}</td>
+			<td>{{s.TRANS_BRIEF}}</td>
+			<!--<td>{{s.UPDATE_STAMP}}</td>
+			<td>{{s.IS_TRANS_CTX}}</td>-->
+		</tr>
+	</table>
+</div>
+<!-- 卡片信息展示结束 -->
+
+<!-- 卡片操作开始 -->
+<div class="pass-bill bgC" ng-if="countOwnFlag == 3">
+	<div class="pwdReset">
+		
+		<div class="count-own-reset-all clearfix">
+			<div class="count-own-reset-count tipsWith">
+				<span class="wordsStyle">原始密码<span style="color: red;">*</span>：</span>
+			</div>
+			
+			<div class="count-own-reset-pwd">
+				<input type="password" ng-change="countOwn.oldPwdFun()" ng-model="countOwn.oldPwdNum" />
+			</div>
+		</div>
+
+		<div class="count-own-reset-all clearfix all-two">
+			<div class="count-own-reset-count tipsWith">
+				<span class="wordsStyle">设置新密码<span style="color: red;">*</span>：</span>
+			</div>
+			<div class="count-own-reset-pwd">
+				<input type="password"  autocomplete="new-password" ng-model="countOwn.resetOne" ng-change="countOwn.inputResetOne()" />
+				<p style="color: red;margin-top:10px ;margin-bottom: 0px;" ng-if="isPwdReset">{{msgOne}}</p>
+			</div>
+		</div>
+
+		<div class="count-own-reset-all all-two">
+			<div class="count-own-reset-count tipsWith">
+				<p class="wordsStyle">确认新密码<span style="color: red;">*</span>：</span>
+			</div>
+			<div class="count-own-reset-pwd">
+				<input type="password" autocomplete="new-password" ng-model="countOwn.resetTwo" ng-change="countOwn.inputResetTwo()" />
+				<p style="color: red; margin-top:10px;margin-bottom: 0px;" ng-if="isPwdResetAgain">{{countMsgOne}}</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="option">
+		<button class="certification btn blue" ng-click="countOwn.resetPwdA()" type="button">确定更改</button>
+	</div>
+</div>
+<!-- 卡片操作结束 -->
+
+<!-- 忘记密码开始 -->
+<div class="forget-password bgC" ng-show="countOwnFlag == 4">
+	<div class="tipsCard">
+		<div class="bankCard">
+			请插入您的身份证
+		</div>
+		<div class="cardPosion">
+
+		</div>
+		<div class="readCard">
+			身份证读取中。。。
+		</div>
+	</div>
+	<!-- <div class="option" ng-click="countOwn.next(countOwnFlag);countOwn.balance(d)"> -->
+	<!--<div class="option" ng-click="countOwn.giveRight()">
+		<button class="certification btn btn-primary" type="button">授权</button>
+	</div>-->
+	<!--<div class="backbtn backcardPhoto">
+		<a href="javascript:;" class="btn2" ng-click="countOwn.backCardID(countOwnFlag)">
+			<i class="fa fa-arrow-circle-left fa-3x"></i>
+			<div>
+				上一步
+			</div>
+		</a>
+	</div>-->
+</div>
+<!-- 忘记密码结束 -->
+
+<!-- 选择授权方式开始 -->
+<div class="authorization bgC" ng-if="countOwnFlag == 5">
+	<div class="checkStyle clearfix">
+		<div class="styleOne">
+			<label class="authorization-option" ng-click="countOwn.phoneCheck()">
+                <input class="radio" type="radio" ng-model="state" name="selectState">
+                <img src="./images/phoneNum.png" alt=""><br/>
+                <h4>手机验证码</h4>       
+            </label>
+		</div>
+
+		<div class="styleTwo">
+			<label class="authorization-option" ng-click="countOwn.memberCheck();">
+                <input class="radio" type="radio" ng-model="state" name="selectState">
+                <img src="./images/teller.png" alt=""><br/>
+                <h4>柜员授权</h4>
+            </label>
+		</div>
+
+	</div>
+
+</div>
+
+<!-- 授权方式开始 -->
+<div class="mobile bgC" ng-if="countOwnFlag == 6">
+	<div class="mobile-phone">
+		<div class="inputOne clearfix">
+			<div class="count-phone-top">
+				<span class="wordsStyle">手机号<span style="color: red;font-size: 22px;">*</span>：</span>
+			</div>
+			<div class="count-phone-bottom">
+				<input type="text" ng-model="countOwn.forgetTel" ng-change="countOwn.resetPhone()" />
+				<p style="color: red;" ng-if="isPhoneNum"></p>
+			</div>
+		</div>
+
+		<div class="inputTwo clearfix">
+			<div class="checkCode">
+				<div class="count-phone-top">
+					<span class="wordsStyle">验证码<span style="color: red;font-size: 22px;">*</span>：</span>
+				</div>
+				<div class="count-phone-bottom">
+					<input type="text" ng-model="countOwn.forgetCode" ng-change="countOwn.resetCode()" />
+					<p style="color: red;margin-top: 10px;" ng-if="codeIsRight">{{countPhoneNumber}}</p>
+				</div>
+				<div class=" checkCodeBtn count-phone-bottom">
+					<button type="button" ng-class="{true:'btn blue',false:'btn btn-primary'}[isSend]" ng-disabled="isDisabled" ng-click="countOwn.getMsgCode()">{{getMsgBtn}}</button>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<div class="option" ng-click="countOwn.finishCheck(countOwnFlag)">
+		<button class="certification btn btn-primary" type="button">确定</button>
+	</div>
+	<div class="backbtn backcardPhoto">
+		<a href="javascript:;" class="btn2" ng-click="countOwn.backCardID(countOwnFlag)">
+			<i class="fa fa-arrow-circle-left fa-3x"></i>
+			<div class="beforeStep">
+				上一步
+			</div>
+		</a>
+	</div>
+</div>
+
+<div ng-if="countOwnFlag == 7" class="bgC">
+	<h3 class="fingerprint">验证柜员指纹</h3>
+	<div class="option" ng-click="countOwn.memeCheck()">
+		<button class="certification btn btn-primary" type="button">验证通过</button>
+	</div>
+	<div class="backbtn backcardPhoto">
+		<a href="javascript:;" class="btn2" ng-click="countOwn.backCardID(countOwnFlag)">
+			<i class="fa fa-arrow-circle-left fa-3x"></i>
+			<div class="beforeStep">
+				上一步
+			</div>
+		</a>
+	</div>
+</div>
+
+<!-- 输入新密码开始 -->
+<div class="pass-bill bgC" ng-if="countOwnFlag == 8">
+	<div class="pwdReset">
+		<div class="count-own-reset-all clearfix">
+			<div class="count-own-reset-count">
+				<p class="wordsStyle">设置新密码<span style="color: red;">*</span>：</p>
+			</div>
+			<div class="count-own-reset-pwd">
+				<input type="password" ng-model="countOwn.setNewPwdValue" ng-change="countOwn.setNewPwd()" />
+				<p style="color: red; margin-top:10px;margin-bottom: 0px;" ng-if="isRightPwdNew">请输入六位数字密码</p>
+			</div>
+		</div>
+
+		<div class=" count-own-reset-all clearfix all-two">
+			<div class="count-own-reset-count">
+				<p class="wordsStyle">确认新密码<span style="color: red;">*</span>：</p>
+			</div>
+			<div class="count-own-reset-pwd">
+				<input type="password" ng-model="countOwn.setNewPwdAgainValue" ng-change="countOwn.setNewPwdAgain()"></label>
+				<p style="color: red; margin-top:10px;margin-bottom: 0px;" ng-if="isRightPwdNewAgain">{{countMsgTwo}}</p>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="option" ng-click="countOwn.surePwd()">
+		<button class="certification btn btn-primary" type="button">确定</button>
+	</div>
+</div>
+
+<div class="openCardFooter">
+	<div ng-include="'tpl/timer.html'" id="openCardTimer" ng-if="countOwnFlag == 0 || countOwnFlag == 4"></div>
+	<div ng-include="'tpl/footer.html'" ng-click="countOwn.clean()"></div>
+</div>

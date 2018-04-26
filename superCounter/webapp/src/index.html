@@ -1,0 +1,123 @@
+<!--<!DOCTYPE html>-->
+<html ng-app="myApp">
+	<head lang="zh">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>银行移动柜面系统</title>
+		<!--应用程序所用，写在依赖之前，解决引用不到压缩包问题-->
+		<!-- Insert this line above script imports  -->
+		<script>
+			if(typeof module === 'object') {
+				window.module = module;
+				module = undefined;
+			}
+		</script>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0," />
+		<link rel="stylesheet" href="./css/base.css" />
+		<link rel="stylesheet" href="./assets/plugins/font-awesome/css/font-awesome.css" />
+		<link rel="stylesheet" href="./css/ft-carousel.css" />
+		
+	    <link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap-switch.css" />
+		<!--<link rel="stylesheet" href="css/index.css"/>-->
+		<link rel="stylesheet" href="./css/dashboar.css" />
+		<link rel="stylesheet" href="./css/evaluat.css" />
+		<link rel="stylesheet" href="./assets/global/plugins/swiper/swiper.min.css">
+		<link rel="stylesheet" href="http://g.alicdn.com/sj/qnui/1.5.1/css/sui-append.min.css" />
+		<link rel="stylesheet" href="http://g.alicdn.com/sj/qnui/1.5.1/css/sui.css" />
+		<!-- toastr提示框模块-->
+		<link rel="stylesheet" type="text/css" href="./assets/global/plugins/bootstrap-toastr/toastr.min.css" />
+		<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.css" />
+		<script src="./assets/plugins/jquery-1.11.0.min.js"></script>
+		<script src="js/ft-carousel.min.js"></script>
+		<script src="./assets/plugins/bootstrap/js/bootstrap.js"></script>
+		
+
+		<script src="./assets/plugins/bootstrap/js/bootstrap-switch.min.js"></script>
+		<!--导入样式-->
+		<link href="./assets/global/css/components.css" id="style_components" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="./css/userMsg.css" />
+        <link rel="stylesheet" href="./css/phoneBank.css" />
+        <link rel="stylesheet" type="text/css" href="./css/manageMoney.css"/>
+        <link rel="stylesheet" type="text/css" href="./css/saveMoney.css"/>
+		<!--angular模块 -->
+		<script src="./assets/plugins/angularjs/angular.min.js"></script>
+		
+	</head>
+
+	<body style="background: #edf9ff;">
+      
+		<!-- 写入路由改变，内容放入的区域-->
+		<div ng-include="'tpl/header.html'"></div>
+		<div class="page-container">
+			<div class="page-content-wrapper">
+				<div class="page-content">
+					<div ui-view class="fade-in-up">
+						  
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 自身js-->
+		<script src="js/main.js"></script>
+
+		<!--ng路由模块-->
+		<!--<script src="../assets/plugins/angularjs/angular-route.js"></script>-->
+		<script src="./assets/plugins/angularjs/angular-ui-router.min.js"></script>
+
+		<!-- 移动端touch 事件-->
+		<script src="./assets/plugins/angularjs/angular-touch.min.js"></script>
+
+		<!--ng动画模块-->
+		<script src="./assets/plugins/angularjs/angular-animate.js"></script>
+		
+
+
+		<!-- 异步加载js模块，必须引用，因为我们控制器是分开的-->
+		<script src="./assets/plugins/angularjs/ocLazyLoad.min.js"></script>
+		<script src="./assets/global/plugins/swiper/swiper.min.js"></script>
+
+		<!--加载sui的JS-->
+		<script src="http://g.alicdn.com/sj/qnui/1.5.1/js/sui.min.js"></script>
+
+		<!-- 加载toastr模块 -->
+		<script src="./assets/global/plugins/bootstrap-toastr/toastr.min.js"></script>
+
+		<script src="./js/controller/dash_controller.js"></script>
+		<script src="./js/controller/plugOwn.js"></script>
+		<script src="./js/controller/actcard_controller.js"></script>
+		<script src="./js/controller/saveMoney_controller.js"></script>
+		<script src="./js/service/actcard_service.js"></script>
+		<script src="./js/service/comservice.js"></script>
+		<!--应用程序所用写在依赖之后，防止找不到对应的依赖-->
+		<script src="./js/controller/countOwn_controller.js"></script>
+		<script src="./js/controller/tssDevice/Finger.js"></script>
+		<script src="./js/controller/tssDevice/Pinpad.js"></script>
+		<script src="./js/controller/tssDevice/Receipt.js"></script>
+		<script src="./js/controller/tssDevice/channelManagement.js"></script>
+		<script src="./js/controller/func_controller.js"></script>
+		<script src="./js/controller/userMsg_controller.js"></script>
+		<script src="./js/controller/tssDevice/Camera.js"></script>
+		<script src="./js/controller/tssDevice/Dev.js"></script>
+		<script src="./js/controller/tssDevice/CardReader.js"></script>
+		<script src="./js/controller/tssDevice/channelManagement.js"></script>
+		<script src="./js/controller/tssDevice/Finger.js"></script>
+		<script src="./js/controller/tssDevice/IDCardReader.js"></script>		
+		<!--<script src="./js/controller/tssDevice/jquery.min.js"></script>-->
+		<script src="./js/controller/tssDevice/jquery.json-2.4.min.js"></script>
+		<script src="./js/controller/tssDevice/Pinpad.js"></script>
+		<script src="./js/controller/tssDevice/qwebchannel.js"></script>
+		<script src="./js/controller/tssDevice/Receipt.js"></script>
+		<script src="./js/controller/tssDevice/IMEService.js"></script>		
+		<script src="./js/controller/TSSDeviceTools.js"></script>
+        <script src="./js/controller/evaluat_controller.js"></script>
+        <script src="./js/controller/phonebank_controller.js"></script>
+        <script src="./js/controller/manageMoney_controller.js"></script>
+		<script>
+		//引入模块
+		if(window.module){
+			module = window.module;				
+		} 
+		</script>
+	</body>
+
+</html>

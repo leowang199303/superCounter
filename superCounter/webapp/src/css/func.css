@@ -1,0 +1,174 @@
+/* 指纹 */
+.fingers {
+    width: 1280px;
+    height: 300px;
+    position: relative;
+    /* text-align: center; */    
+}
+.fingers .fingers-option1 {
+    line-height: 20px;
+    font-size: 20px;
+    color: #444444;
+    border-top: 4px solid #987cb9;
+    border-bottom: 4px solid #987cb9;
+}
+.fingers .fingers-option1 button {
+    width: 160px;
+    height: 42px;
+    border: none;
+    border-radius: 5px;
+    background: #fdfdfdfd;
+    margin-top: 50px;
+    margin-bottom: 12px;
+    margin-left: 30px;
+}
+.fingers .fingers-option2 {
+    line-height: 20px;
+    font-size: 20px;
+    color: #444444;
+    border-bottom: 4px solid #987cb9;
+}
+.fingers .fingers-option2 button {
+    width: 200px;
+    height: 42px;
+    border: none;
+    border-radius: 5px;
+    background: #fdfdfdfd;
+    margin-top: 50px;
+    margin-bottom: 12px;
+    margin-left: 30px;
+}
+
+.pinpad {
+    width: 1280px;
+    height: 450px;
+    position: relative;
+}
+.pinpad .pinpad-option1 {
+    line-height: 20px;
+    font-size: 20px;
+    color: #444444;
+    border-top: 4px solid #987cb9;
+    border-bottom: 4px solid #987cb9;
+}
+.pinpad .pinpad-option1 button {
+    width: 160px;
+    height: 42px;
+    border: none;
+    border-radius: 5px;
+    background: #fdfdfdfd;
+    margin-top: 50px;
+    margin-bottom: 12px;
+    margin-left: 30px;
+}
+.pinpad .pinpad-option2 {
+    line-height: 20px;
+    font-size: 20px;
+    color: #444444;
+    border-bottom: 4px solid #987cb9;
+}
+.pinpad .pinpad-option2 button {
+    width: 200px;
+    height: 42px;
+    border: none;
+    border-radius: 5px;
+    background: #fdfdfdfd;
+    margin-top: 50px;
+    margin-bottom: 12px;
+    margin-left: 30px;
+}
+.pinpad .pinpad-option3 {
+    line-height: 20px;
+    font-size: 20px;
+    color: #444444;
+    border-bottom: 4px solid #987cb9;
+}
+.pinpad .pinpad-option3 button {
+    width: 160px;
+    height: 42px;
+    border: none;
+    border-radius: 5px;
+    background: #fdfdfdfd;
+    margin-top: 50px;
+    margin-bottom: 12px;
+    margin-left: 30px;
+}
+.pinpad .pinpad-option4 {
+    line-height: 20px;
+    font-size: 20px;
+    color: #444444;
+    border-bottom: 4px solid #987cb9;
+}
+.pinpad .pinpad-option4 button {
+    width: 120px;
+    height: 42px;
+    border: none;
+    border-radius: 5px;
+    background: #fdfdfdfd;
+    margin-top: 50px;
+    margin-bottom: 12px;
+    margin-left: 30px;
+}
+
+/* 相机 */
+.cameras {
+    width: 1280px;
+    height: 300px;
+    position: relative;    
+}
+.cameras .cameras-option1 {
+    line-height: 20px;
+    font-size: 20px;
+    color: #444444;
+    border-top: 4px solid #987cb9;
+    border-bottom: 4px solid #987cb9;
+}
+.cameras .cameras-option1 button {
+    width: 140px;
+    height: 42px;
+    border: none;
+    border-radius: 5px;
+    background: #fdfdfdfd;
+    margin-top: 50px;
+    margin-bottom: 12px;
+    margin-left: 30px;
+}
+.cameras .cameras-option2 {
+    line-height: 20px;
+    font-size: 20px;
+    color: #444444;
+    border-bottom: 4px solid #987cb9;
+}
+.cameras .cameras-option2 button {
+    width: 100px;
+    height: 42px;
+    border: none;
+    border-radius: 5px;
+    background: #fdfdfdfd;
+    margin-top: 50px;
+    margin-bottom: 12px;
+    margin-left: 30px;
+}
+/*开始按钮*/
+/*上层*/
+.btnOneo,.btntwo,.btnthree{
+	width: 1280px;
+}
+.oneTop ul li{
+	float: left;
+	margin-right:5%;
+	margin-bottom:50px;
+}
+.oneTop ul{
+	display: flex;
+	flex-wrap: wrap;
+	width: 90%;
+	margin: 0 auto;
+	overflow: hidden;
+}	
+.blueLine{
+	border:2px solid #987cb9;
+}
+.mb{
+	margin-bottom: 50px;
+}

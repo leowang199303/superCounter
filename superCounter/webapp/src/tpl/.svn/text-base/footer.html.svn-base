@@ -1,0 +1,11 @@
+<!--底部代码-->
+<div id="footer">
+<!--	<a href="#/dashboard.html">-->
+	<div class="openhom">
+		<img src="./images/home.png">
+		<div class="openback">
+			<span>返回首页</span>
+		</div>
+	</div>		
+<!--	</a>-->
+</div>

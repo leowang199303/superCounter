@@ -1,0 +1,486 @@
+<!-- 刷身份证  -->
+<div class="bgc" ng-if="mangePage == 0">
+	<div class="tipsCard">
+		<div class="bankCard">
+			请插入您的身份证
+		</div>
+		<div class="cardPosion">
+
+		</div>
+		<div class="readCard">
+			身份证读取中。。。
+		</div>
+	</div>
+</div>
+
+<!--做过风险评测-->
+<div class="bgc" ng-if="mangePage == 1">
+	<div class="result">
+		<p class="resultOne">您是：<span style="color:#ad7b04;"> {{type}}</span></p>
+		<p class="resultContent">{{typeVal}}</p>
+	</div>
+	<div class="btnOne gB">
+		<button class="btn blue" ng-click="mangePageObj.startDoTest()">重新评测</button>
+		<button class="btn blue" ng-click="mangePageObj.starProduct()">去理财</button>
+	</div>
+
+	<div ng-include="'tpl/finishBottom.html'" id="finishBottom">
+
+	</div>
+</div>
+
+<!--没有做过风险评测-->
+<div class="bgc" ng-if="mangePage == 2">
+	<div class="respect">
+		<span>尊敬的用户</span>
+		<span>欢迎您</span>
+	</div>
+
+	<div class="intro">
+		您还没有进行过风险评测，请先风险评测
+	</div>
+
+	<div class="startBtn" ng-click="mangePageObj.startDoTest()">
+		去风险评测
+	</div>
+</div>
+
+<!--产品列表页-->
+<div class="bgc manage-product-list-all" ng-if="mangePage == 3">
+	<div class="manage-product clearfix">
+		
+		<div class="manage-product-hot">
+			<div class="manage-product-hot-title">热门产品</div>
+			<div id="myCarousel" class="carousel slide">
+				<!-- 轮播（Carousel）指标 -->
+				<!--<ol class="carousel-indicators"  style="margin-left: 0px;">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+				</ol>-->
+				<!-- 轮播（Carousel）项目 -->
+				<div class="carousel-inner">
+					<div class="item active">
+						<img src="./images/c1.jpg" alt="First slide" class="manage-product-hot-img">
+					</div>
+					<div class="item">
+						<img src="./images/c2.jpg" alt="First slide" class="manage-product-hot-img">
+					</div>
+				</div>
+
+			</div>
+		</div>
+		
+		<div class="manage-product-first">
+			<div class="manage-product-first-title">推荐产品</div>
+			<div>
+				<div ng-repeat="p in productFirst" class="clearfix productList" ng-init="hotIndex = $index" isHot = "no" hotIndex = "{{hotIndex}}" ng-click="mangePageObj.detail(this)">
+					<div class="manage-product-first-title-name">{{p.productName}}</div>
+					<div  class="manage-product-first-title-earnings"><span>期望年化：</span><span style="color: red;">{{p.earnings}}</span></div>
+				</div>
+			</div>
+		</div>	
+		
+		
+	</div>
+	<div class="manage-product-bottom clearfix">
+		所有产品
+		<div style="float: right;">
+			<!--<button class="btn blue" ng-click="mangePageObj.productWant()">筛选</button>-->
+			<button class="btn blue" ng-click="mangePageObj.reset()">重置</button>
+		</div>
+		
+	</div>
+	   
+    <ul class="conditionList clearfix">
+    	
+    	<li ng-repeat="s in selectType" ng-init="outerIndex = $index">
+    		<select class="select_{{outerIndex}}" onchange="mangePageObj.chosecondition(this)">
+    			<option value="{{s.selectName}}" optionId = "no">{{s.selectName}}</option>
+    			<option ng-repeat="ss in s.selectOptions" ng-init="innerIndex = $index" value="{{ss.optionValue}}" optionid="{{ss.optionId}}">
+    				{{ss.optionValue}}
+    			</option>
+    		</select>
+    	</li>
+    </ul>
+    
+     
+    <ul class="forShowCondition clearfix">
+    	<li class="conditionSelect">筛选条件：</li>
+    	<li ng-repeat="f in forShow" class="needBorde">
+    		<span>{{f}}</span>
+    		<b></b>
+    	</li>
+    	
+    </ul>
+    
+     
+	    
+		<!--<table class="oneTable">
+			<tr ng-repeat="s in selectType">
+				<td>
+					{{s.selectName}}：
+				</td>
+				<td ng-repeat="ss in s.selectOptions">
+					<input type="radio" name="{{s.selectName}}" id="" value="{{ss.optionValue}}" class="condi_" ng-click="mangePageObj.chosecondition(this)"/>{{ss.optionValue}}
+				</td>
+			</tr>
+		</table>-->
+	 
+	<table class="productListAll-first-table-div">
+		<tr class="productListAll-first-table">
+			<td class="col-lg-3" style="height: 60px;margin-left:-100px;">产品</td>
+			<td class="col-lg-3" style="height: 60px;">起购金额</td>
+			<td class="col-lg-3" style="height: 60px;">投资期限</td>
+			<td class="col-lg-3" style="height: 60px;" >期望年化</td>
+			<td class="col-lg-3" style="height: 60px;">..</td>
+		</tr>
+	</table>
+	<div ng-if="productMsgTips" style="width: 90%;margin: 0 auto;color: #777;">{{productMsg}}</div>
+	<table class="productListAll-div">
+		
+		 
+		<tr ng-repeat="p in allProduct" class="clearfix productListAll"  ng-click="mangePageObj.detail(this)">
+			<td class="col-lg-4" style="position: relative;">
+				 
+				{{p.productName}}
+				<p class="productListAll-p">
+					<span>{{p.isRansom}}</span>
+					<span>{{p.isBreakEven}}</span>
+					<span>{{p.riskLevel}}</span>
+					<span>{{p.investType}}</span>						
+				</p>
+				 
+			</td>
+			<td class="col-lg-3"><span class="red">{{p.beginSellMoney}}</span></td>
+			<td class="col-lg-3"><span class="red">{{p.productDate}}</span></td>
+			<td class="col-lg-3"><span class="red">{{p.earnings}}</span></td>
+			<td class="col-lg-2">
+				<button class="btn blue">查看</button>
+			</td>
+		</tr>
+	</table>
+	
+</div>
+
+
+<!--产品详情页-->
+<div class="bgc" ng-if="mangePage == 4">
+	<div class="page-header">
+		<h1 class="cardtitle-saveMoneyPage">{{productDetailName}} ({{productCode}})</h1>
+	</div>
+	   
+	<div class="saveMoney-detail-special">
+		<ul class="saveMoney-detail-special-list">
+			<li>预期年化收益率：<span class="saveMoney-detail-special-val">{{detailEarnings}}</span></li>
+			<li>起购金额：<span class="saveMoney-detail-special-val">{{detailBeginSellMoney}}</span></li>
+			<li>投资期限：<span class="saveMoney-detail-special-val">{{detailProductDate}}</span></li>
+			<li>发行时间：<span class="saveMoney-detail-special-val">{{detailProRaiseBeginDate}}</span> - <span class="saveMoney-detail-special-val">{{detailProRaiseEndDate}}</span></li>
+		</ul>
+	</div>
+	
+	<!--提示-->
+	<div class="saveMoney-detail-tips clearfix">
+	    <div>
+	    	<img src="./images/1.png"/>
+	    </div>
+	    <div>
+	    	<p ng-repeat="p in attention">{{p}}</p>
+	    </div>		
+	</div>
+	<!--选项卡-->
+	<div class="saveMoney-detail-three clearfix">
+		<ul>
+			<li ng-click="mangePageObj.threeList(1)" ng-class="{true:'activeDetail',false:''}[isSelectedOne]">产品详情</li>
+			<li ng-click="mangePageObj.threeList(2)" ng-class="{true:'activeDetail',false:''}[isSelectedTwo]">产品说明书</li>
+			<li ng-click="mangePageObj.threeList(3)" ng-class="{true:'activeDetail',false:''}[isSelectedThree]">产品公告</li>
+		</ul>
+		<button class="btn blue product-buy" ng-click="mangePageObj.productBuy()">购买</button>
+	</div>
+	
+    <!--产品详情-->
+	<div class="saveMoney-detail-form" ng-if="isSelectedOne">
+		<table border="1px solid #ccc" class="saveMoney-detail-form-form">
+			<tr class="saveMoney-detail-form-form-one-tr">
+				<td colspan="4">
+					{{productDetailName}}
+				</td>					
+			</tr>
+			<tr>
+				<td >预期年化收益率</td>
+				<td>{{detailEarnings}}</td>
+				<td>首次起购金额</td>
+				<td>{{detailBeginSellMoney}}</td>
+			</tr>
+			<tr>
+				<td>投资期限</td>
+				<td>{{detailProductDate}}</td>
+				<td>发行时间</td>
+				<td>{{detailProRaiseBeginDate}}&nbsp;&nbsp; 至  &nbsp;&nbsp;{{detailProRaiseEndDate}}</td>
+			</tr>
+			<tr>
+				<td>是否保本</td>
+				<td>{{detailIsBreakEven}}</td>
+				<td>可否赎回</td>
+				<td>{{detailIsRansom}}</td>			
+			</tr>
+			<tr>
+				<td>投资币种</td>
+				<td>{{detailCurrency}}</td>
+				<td>风险等级</td>
+				<td>{{detailRiskLevel}}</td>
+			</tr>
+			<tr>
+				<td>发行区域</td>
+				<td  colspan="3">{{detailIssueArea}}</td>
+			</tr>
+		</table>
+		
+		<!--图示-->
+		<div class="saveMoney-detail-form-img">
+			<div class="produc_line">
+				
+				<div class="product_d no_1 clearfix" id="collEndDate3">
+					<span>{{detailproRaiseEndDate}}</span>
+					<span>产品募集期截至</span>
+					<b id="b1"></b>
+				</div>
+				
+				<div class="product_d no_2 clearfix">
+					<span>{{detailproExpireDate}}</span>
+					<span>产品到期日</span>
+					<b id="b2"></b>
+				</div>
+				
+				<div class="product_d no_3 clearfix">
+					<span>{{detailproSetupDate}}</span>
+					<span>产品成立</span>
+					<b id="b3"></b>
+				</div>
+				
+				<div class="product_d no_4 clearfix">
+					<span>2018.1.26</span>
+					<span>{{detailproRaiseBeginDate}}</span>
+					<b id="b4"></b>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<!--产品说明书-->
+	<div class="saveMoney-detail-introduce" ng-if="isSelectedTwo">
+		<p>查看产品说明书</p>
+	</div>
+	
+	<!--产品公告-->
+	<div class="saveMoney-detail-voice" ng-if="isSelectedThree">
+		<p>暂无相关公告</p>
+	</div>
+		
+	<div class="backbtn backCardK">
+		<a href="javascript:;" class="btn2" ng-click="mangePageObj.backCardK()">
+			<i class="fa fa-arrow-circle-left fa-3x"></i>
+			<div class="beforeStep">
+				上一步
+			</div>
+		</a>
+	</div>
+</div>
+
+<!--填写购买信息-->
+<div class="bgc" ng-if="mangePage == 5">
+	<div class="page-header">
+		<h1 class="cardtitle-saveMoneyPage">填写购买信息</h1>
+	</div>
+	
+	<div class="saveMoneyPage-give-msg-top">
+		<div class="saveMoneyPage-give-msg clearfix">
+			<img src="./images/pro_ico.jpg"/>
+			<div class="saveMoneyPage-give-msg-spans">
+				<span>产品名称：</span>
+				<span>{{productDetailName}}</span>
+			</div>
+		</div>
+		<table class="saveMoneyPage-give-msg-table"  style="border-collapse:separate; border-spacing:20px 30px;">
+			<tr>
+				<td>币种</td>
+				<td>{{detailCurrency}}</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>投资期限</td>
+				<td>{{detailProductDate}}</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>					
+					银行账户<span class="red">*</span>
+				</td>
+				<td>
+					<input type="text" class="saveMoneyPage-give-msg-input" ng-model="mangePageObj.bankCardNum" style="border:1px solid #0066B3;"/>
+					<p class="saveMoneyPage-give-msg-warn" ng-if="bankCardNum">{{bankCardNumText}}</p>
+				</td>
+				<td class="saveMoneyPage-give-msg-card-back">请使用在产品发行区域内开通的银行储蓄账户</td>
+			</tr>
+			<tr>
+				<td>
+					
+					购买金额<span class="red">*</span>		
+				</td>
+				<td>
+					<input type="text" class="saveMoneyPage-give-msg-input" ng-model="mangePageObj.buyMoey" style="border:1px solid #0066B3;"/>
+					<p class="saveMoneyPage-give-msg-warn" ng-if="buyMoey">{{buyMoeyText}}</p>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+					风险声明			
+				</td>
+				<td>
+			                   本人已阅读风险提示，愿意承担投资风险
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="checkbox" ng-click="mangePageObj.agreeXie(this)" ng-model="mangePageObj.checkValu"/>本人已阅读并同意以下内容
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td class="saveMoneyPage-give-msg-agree">
+					《关于本行理财产品风险提示书及产品说明书》
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<button ng-class="{true:'btn blue',false:'btn btn-primary'}[isTrue]" ng-disabled="isDisabled" ng-click="mangePageObj.finishMsg()">下一步</button>
+				</td>
+				<td></td>
+			</tr>
+		</table>		
+	</div>
+	
+	
+	
+	<div class="backbtn backCardK">
+		<a href="javascript:;" class="btn2" ng-click="mangePageObj.backCardF()">
+			<i class="fa fa-arrow-circle-left fa-3x"></i>
+			<div class="beforeStep">
+				上一步
+			</div>
+		</a>
+	</div>
+</div>
+
+
+<!--信息确认-->
+<div class="bgc" ng-if="mangePage == 6">
+	<div class="page-header">
+		<h1 class="cardtitle-saveMoneyPage">确认购买信息</h1>
+	</div>
+	
+	<table class="saveMoneyPage-give-msg-table-makeSure"  style="border-collapse:separate; border-spacing:50px 30px;">
+		<tr>
+			<td>产品名称</td>
+			<td>{{productDetailName}}</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td>币种</td>
+			<td>{{detailCurrency}}</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td>投资期限</td>
+			<td>{{detailProductDate}}</td>
+			<td></td>
+		</tr>
+		
+		<tr>
+			<td>					
+				银行账户<span class="red">*</span>
+			</td>
+			<td>
+				{{mangePageObj.bankCardNum}}
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>购买金额<span class="red">*</span></td>
+			<td>{{mangePageObj.buyMoey}}</td>
+			<td></td>
+		</tr>
+	</table>
+	<div class="button-div">
+		<button class="btn blue" ng-click="mangePageObj.makeSureBuy()">购买</button>
+	</div>
+
+	
+	
+	<div class="backbtn backCardK">
+		<a href="javascript:;" class="btn2" ng-click="mangePageObj.backCardM()">
+			<i class="fa fa-arrow-circle-left fa-3x"></i>
+			<div class="beforeStep">
+				上一步
+			</div>
+		</a>
+	</div>	
+</div>
+
+<div class="bgc" ng-if="mangePage == 7">
+	<div class="tipsCard">
+		<div class="bankCard">
+			请插入您的银行卡
+		</div>
+		<div class="cardPosion">
+
+		</div>
+		<div class="readCard">
+			银行卡读取中。。。
+		</div>
+	</div>
+</div>
+
+<!-- 录入密码开始 -->
+<div class="count-own-pwd bgc" ng-if="mangePage == 8">
+
+	<div class="password-one-first clearfix">
+		<div class="count_own_head">
+			<span class="count-own_tips">卡号</span>
+			<span class="count-own-card-num">{{bankCardNum}}</span>
+		</div>
+		
+		<div class="count-own-tips">
+			<span class="wordsStyle">请输入密码<span style="color: red;">*</span>：</span>
+		</div>
+		<div class="count-own-number">
+			<input type="password" class="inputWidths"  ng-model="mangePageObj.cardPwd" autocomplete="new-password" />
+			<br />
+			<p style="color: red;margin-top: 10px;margin-bottom: 0px;" ng-if="isPwd">{{errorMsg}}</p>
+		</div>
+
+	</div><br/>
+	<div class="option-one" ng-click="mangePageObj.checkPwdIsright()">
+		<button class="certification btn blue btnStyle" type="button">下一步</button>
+	</div>	
+</div>
+
+
+<div  class="bgc" ng-if="mangePage == 9">
+	<p class="phone-bank-end-title">
+		{{finishMsg}}
+	</p>
+</div>
+<!--底部计时器和返回菜单-->
+<div class="openCardFooter">
+	<div ng-include="'tpl/timer.html'" id="openCardTimer" ng-if="mangePage == 0 || mangePage == 7 || mangePage == 9"></div>
+	<div ng-include="'tpl/footer.html'" ng-click="mangePageObj.clean()"></div>
+</div>

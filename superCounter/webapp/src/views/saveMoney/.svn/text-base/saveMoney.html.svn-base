@@ -1,0 +1,164 @@
+<div ng-if="saveMoneyPage == 0" class="bgc">
+	<div class="tipsCard">
+		<div class="bankCard">
+			请插入您的银行卡
+		</div>
+		<div class="cardPosion">
+
+		</div>
+		<div class="readCard">
+			银行卡读取中。。。
+		</div>
+	</div>
+</div>
+
+<div ng-if="saveMoneyPage == 1" class="bgc">
+	<div class="page-header">
+		<h1 class="cardtitle-saveMoneyPage">转账</h1>
+	</div>
+	<form class="form-horizontal someStyle" style="width:90%;margin: 0 auto;padding-left: 200px;margin-top: 100px;">
+		<div class="form-bodyform-body">
+			<div class="form-group saveMoney-form-group">
+				<label class="control-label col-md-3 saveMoney-form-group-marR someStyle">付款账户：</label>
+				<div class="col-md-7">
+					<div>
+						{{afterChangeStyle}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: red;">{{bankName}}</span>
+					</div>
+					<div class="saveMoney-card-detail">
+						<span>{{currencyOne}}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>{{count | currency:'￥':2}}</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-group saveMoney-form-group">
+				<label class="someStyle control-label col-md-3  saveMoney-form-group-marR">收款账户<span style="color: red;">*</span>：</label>
+				<div class="col-md-7 clearfix">
+					<span class="form-left">
+						<input type="text" class="form-control input-width-saveMoney-bottom" ng-model="saveMoneyObj.getBankNo" ng-change="saveMoneyObj.findBank()"/> 
+						<span style="color: red;display:block;margin-top:10px;position: absolute;font-size: 18px;" ng-if = "getBankNo">{{getBankNoText}}</span>
+					</span>
+					<span class="form-right">
+						<img src="{{getBankLogol}}"  class="logoImg" style="display: none;"/> {{getBankName}}
+					</span>
+				</div>
+			</div>
+			
+			<div class="form-group saveMoney-form-group">
+				<label class="someStyle control-label col-md-3  saveMoney-form-group-marR">收款户名<span style="color: red;">*</span>：</label>
+				<div class="col-md-7">
+					<input type="text" class="form-control input-width-saveMoney" ng-model="saveMoneyObj.cardPerson"/>
+					<span style="font-size: 18px;color: red;display:block;margin-top:10px;position: absolute;" ng-if = "cardPerson">{{cardPersonText}}</span>
+				</div>
+			</div>
+
+			<div class="form-group saveMoney-form-group">
+				<label class="someStyle control-label col-md-3  saveMoney-form-group-marR">转账金额<span style="color: red;">*</span>：</label>
+				<div class="col-md-7">
+					<span>
+						<input type="text" class="form-control input-width-saveMoney" ng-model="saveMoneyObj.cardCount"/> 
+						<span style="font-size: 18px;color: red;display:block;margin-top:10px;position: absolute;" ng-if="cardCount">{{cardCountText}}</span>
+					</span>
+				</div>
+			</div>
+
+		</div>
+	</form>
+
+	<div class="saveMoneyPage-btn">
+		<button class="btnStyle btn blue" ng-click="saveMoneyObj.next()">下一步</button>
+	</div>
+</div>
+
+<div ng-if="saveMoneyPage == 2" class="bgc">
+	<div class="page-header">
+		<h1 class="cardtitle-saveMoneyPage">确认转账信息</h1>
+	</div>
+	<div class="saveMoneyPage-zhuan-title"></div>
+	<form class="form-horizontal someStyle" style="width:90%;margin: 0 auto;padding-left: 200px;margin-top: 100px;">
+		<div class="form-bodyform-body">
+			<div class="form-group saveMoney-form-group">
+				<label class="someStyle control-label col-md-3 saveMoney-form-group-marR">付款账户：</label>
+				<div class="col-md-7 need-little-top-saveMoney" >
+					<div>
+						{{afterChangeStyle}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>{{bankName}}</span>
+					</div>
+					<div class="saveMoney-card-detail">
+						<span>{{currencyOne}}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>{{count | currency:'￥':2}}</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-group saveMoney-form-group">
+				<label class="someStyle control-label col-md-3 saveMoney-form-group-marR">收款账户：</label>
+				<div class="col-md-7 clearfix need-little-top-saveMoney">
+					<span class="form-left">
+						{{saveMoneyObj.getBankNo}}
+					</span>
+					<span class="form-right">
+						<img src="{{getBankLogol}}"  class="logoImg"/> {{getBankName}}
+					</span>
+
+				</div>
+			</div>
+			
+			<div class="form-group saveMoney-form-group">
+				<label class="someStyle control-label col-md-3  saveMoney-form-group-marR">收款户名：</label>
+				<div class="col-md-7 need-little-top-saveMoney">
+					<span>{{msgObj.cardPerson}}</span>
+				</div>
+			</div>
+
+			<div class="form-group saveMoney-form-group">
+				<label class="someStyle control-label col-md-3  saveMoney-form-group-marR">转账金额：</label>
+				<div class="col-md-7 need-little-top-saveMoney">
+					<span>
+						{{msgObj.cardCount | currency:'￥':2}}
+					</span>
+				</div>
+			</div>
+		</div>
+	</form>
+    
+    <div class="backbtn backCardK">
+		<a href="javascript:;" class="btn2" ng-click="saveMoneyObj.last()">
+			<i class="fa fa-arrow-circle-left fa-3x"></i>
+			<div class="beforeStep">
+				上一步
+			</div>
+		</a>
+	</div>
+    
+	<div class="saveMoneyPage-btn">
+		<button class="btnStyle btn blue" ng-click="saveMoneyObj.makeSure()">确认转账</button>
+	</div>
+</div>
+
+<div ng-if="saveMoneyPage == 3" class="bgc">
+	<div class="saveMoney-pwd">
+		<label class="control-label col-md-5 wordsStyle" style="text-align: right;">输入密码<span style="color: red;">*</span>:</label>
+		<div class="col-md-4 clearfix">
+			<span>
+				<input type="password" class="inputWidth" ng-model="saveMoneyObj.pwd"/>
+				<span style="color: red;display:block;margin-top:10px;position: absolute;" ng-if = "pwd">{{pwdText}}</span>
+			</span>
+		</div>
+	</div>
+
+	<div class="saveMoneyPage-btn">
+		<button class="btnStyle btn blue" ng-click="saveMoneyObj.rightPwd()">确认</button>
+	</div>
+</div>
+
+<div ng-if="saveMoneyPage == 4" class="bgc">
+	<p class="phone-bank-end-title">
+		{{msgCome}}
+	</p>
+	
+	<div ng-include="'tpl/finishBottom.html'" id="finishBottom">
+        	
+    </div>
+</div>
+<div class="openCardFooter">
+	<div ng-include="'tpl/timer.html'" id="openCardTimer" ng-if="saveMoneyPage == 0 || saveMoneyPage == 4"></div>
+	<div ng-include="'tpl/footer.html'" ng-click="saveMoneyObj.clean()"></div>
+</div>

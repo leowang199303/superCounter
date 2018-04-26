@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/tss/!svn/ver/2/branches/superCounter/webapp/src/assets/global/plugins/jquery-mixitup
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/tss/!svn/ver/2/branches/superCounter/webapp/src/assets/global/plugins/jquery-mixitup/.gitignore
+END
+mixitup.jquery.json
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/tss/!svn/ver/2/branches/superCounter/webapp/src/assets/global/plugins/jquery-mixitup/mixitup.jquery.json
+END
+bower.json
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/tss/!svn/ver/2/branches/superCounter/webapp/src/assets/global/plugins/jquery-mixitup/bower.json
+END
+jquery.mixitup.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/tss/!svn/ver/2/branches/superCounter/webapp/src/assets/global/plugins/jquery-mixitup/jquery.mixitup.min.js
+END
+README.md
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/tss/!svn/ver/2/branches/superCounter/webapp/src/assets/global/plugins/jquery-mixitup/README.md
+END

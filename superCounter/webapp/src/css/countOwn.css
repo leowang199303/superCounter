@@ -1,0 +1,299 @@
+/* 通用样式开始 */
+.option {
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+	position: absolute;
+	bottom:200px;
+}
+.option .certification {  
+    margin-top: 30px;
+    margin-left: 46%;
+    /*width: 12%;
+    height: 30px;*/
+   /* font-size: 18px;*/
+    /*background: blue;
+    border-radius: 20px;*/
+}
+.radio {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+    padding-left: 250px;
+}
+/* 通用样式结束 */
+
+/* 刷介质开始 */
+.count-own__page {
+    display: -webkit-box; /* 设定为弹性盒子 */
+    -webkit-box-orient: horizontal; /* 设定弹性盒子为水平方向 */
+    margin-left: 14%;    
+    height: 300px;
+    width: 60%;
+    text-align: center;    
+}
+.count-own__page p {
+    font-size: 20px;
+    margin-top: 40px;
+}
+.count-own__left {
+    -webkit-box-flex: 1; /* count-own__left占据的宽度为1份 */
+    font-size: 18px;
+    margin-top: 20px;
+    color: green;
+}
+.count-own__left .remain-time p {
+    margin-top: 60px;
+    color: red;
+    font-size: 20px;
+}
+.count-own__right {
+    -webkit-box-flex: 3; /* count-own__right占据的宽度为2份 */
+    border: 1px solid #cccccc;
+    background: #cccccc;
+    border-radius: 6px;
+}
+/* 刷介质认证结束 */
+.beforeStep{
+	margin-top: 10px;
+}
+/* 录入密码开始 */
+.password {
+	position: absolute;
+	top: 200px;
+	left: 303px;
+	/*text-align: center;*/
+	width:auto;
+    /*margin-top:95px;*/ 
+    font-size: 20px;
+    /*padding-top: 20px;*/
+}
+.forget-pass{
+	text-align: right;
+    margin-top:40px;
+}
+.page-own__password .password .input-cardNumber,.input-password {
+    /*margin-left: 140px;*/
+    /*font-size: 20px;*/
+}
+.card-inform .card-inform__option .input-cardNumber input {
+    width: 190px;
+}
+.card-inform .card-inform__option .print-bill {
+    width: 80px;
+    height: 24px;
+    margin-left: 10px;
+}
+/* 录入密码结束 */
+
+/* 卡片信息展示开始 */
+.card-inform {
+    width: 80%;
+    height: 200px;
+    margin-top: 36px;
+    margin-left: 200px;
+}
+.card-inform .card-inform__option {
+    width: 60%;
+    height: 150px;
+    margin-top: 16px;
+    margin-left: 200px;
+    clear: both;
+}
+table {
+    width: 400px;
+    height: 40px;
+    text-align: center;
+    table-layout: fixed;
+}
+table td {
+    height: 30px;
+    word-break: keep-all;/* 不换行 */
+    white-space: nowrap;/* 不换行 */
+    overflow: hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow: ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+}
+/* 卡片信息展示结束 */
+
+/* 卡操作开始 */
+/*.pass-bill {
+    margin: 100px auto;
+}*/
+/*.pass-bill .password .input-password {
+    margin-left: 220px;
+}*/
+.pass-bill .password {
+    margin-top: 20px;
+}
+/* 卡操作结束 */
+/*.authorization .authorization-option {
+    margin-left: 32%;
+}*/
+/*.mobile {
+    margin: 160px auto;
+}*/
+.mobile .mobile-phone {
+    width: 90%;
+    margin: 270px auto 0 auto;
+}
+.fingerprint {
+    margin-top: 120px;
+    margin-left: 45%;
+}
+
+.backbtn{
+    min-height: 80px;
+    /*margin-bottom: 5%;*/
+}
+.backcardPhoto{
+	position: fixed;
+	right: 0;
+	bottom: 0px;
+}
+.btn2 {
+    height: 80px;
+    min-width:50px;
+    margin: -2px 15px 0 15px;
+    /*border: 1px solid #ddd;*/
+    padding: 25px 0px 0px 0px;
+    background-color: #fafafa;
+    background-image: none;
+    filter: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    display: inline-block;
+    color: #646464;
+    text-shadow: none;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    line-height: normal;
+}
+#streamHeig{
+	height: 50px;
+	width: auto;
+	overflow-y:scroll;
+	float: left;
+}
+#pintDeail{
+	float: right;
+	margin-bottom:50px;
+}
+.pwdReset{
+	width: auto;
+	margin: 150px auto 0 auto;
+	position: relative;
+	height: auto; 
+}
+.checkStyle{
+	width:50%;
+	margin: 200px auto 0 auto;
+}
+.styleOne{
+	float: left;
+}
+.styleTwo{
+	float: right;
+}
+.inputOne,.inputTwo{
+	width: 50%;
+	/*text-align: center;*/
+	/*margin-top:40px;*/
+	margin: 40px auto 0 350px;
+}
+.checkCodeBtn{
+	margin-left: 20px;
+}
+.resetPwd{
+	width: 90%;
+	margin: 300px auto 0 auto;
+	text-align: center;
+}
+.count-own-tips{
+	float: left; 
+	margin-top:4px;
+	
+}
+.count-own-number{
+	float: left;
+	vertical-align:middle;
+}
+.count-own-reset-count{
+	float: left;
+	margin-top: 4px;
+}
+.count-own-reset-pwd{
+	float: right;
+}
+.count-own-reset-all{
+	width:31%;
+	margin: 0 auto;
+}
+.phone-bank-get-msg-content{
+	position: relative;
+}
+.all-two{
+	margin-top:40px;
+}
+
+.count-phone-top{
+	float: left;
+	margin-top: 4px;
+}
+.count-phone-bottom{
+	float: left;
+	margin-left: 20px;
+}
+#clearBtn{
+	float: right;
+}
+.count-own_tips{
+	font-size: 25px;
+	color: #5F6165;
+}
+.count-own-card-num{
+	font-size: 26px;
+	margin-left: 15px;
+	color: #AD7B04;
+}
+.count_own_head{
+	text-align: left;
+	margin-bottom:40px;
+}
+.tipsWith{
+	width: 142px;
+	text-align: right;
+}
+.mask {
+
+	position: absolute;
+	top: 0px;
+	filter: alpha(opacity=60);
+	background-color: #777;
+	z-index: 1002;
+	left: 0px;
+	opacity: 0.7;
+	-moz-opacity: 0.5;
+}
+.count-own-pwd{
+	position: absolute;
+	top: 195px;
+	left: 132px;
+	z-index: 10090;
+	background-color: white;
+	width: 80%;
+	border-radius: 30px;	
+}
+.btnStyle {
+	width: 100px;
+	height: 40px;
+}
+/*.openCardFooter{
+	margin-top: 10px;
+}*/

@@ -1,0 +1,191 @@
+.userMsg{
+	width: 85%;
+	height: auto;
+	margin: 0 auto;
+	background-color: #fff;
+}
+.beforeStep,.advertext{
+	margin-top: 10px;
+}
+.bankCard{
+	letter-spacing:5px;
+	width: 100%;
+	height: 50px;
+	font-size: 14px;
+	line-height: 50px;
+    color: #777;
+    font-weight: bold;
+    text-align: center;
+}
+.tipsCard{
+	border: 1px solid #0b94ea;
+	max-width: 600px;
+    margin: 5% auto;
+}
+.cardPosion{
+	background: #ccc;
+	min-height: 350px;
+    width: 80%;
+    margin: 0 auto;
+}
+.readCard{
+	letter-spacing:5px
+	width: 100%;
+	height: 50px;
+	font-size: 14px;
+	line-height: 50px;
+    color: #777;
+    font-weight: bold;
+    text-align: center; 
+}
+.liu{
+	padding-left:150px;
+	width:90%;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 25px;
+    color: #5f6165;
+}
+.nextStep{
+	border-width: 0;
+    padding: 7px 14px;
+    font-size: 14px;
+    outline: none !important;
+    background-image: none !important;
+    filter: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+.btnD{
+	width: 50%;
+	text-align: center;
+	margin: 0 auto;
+}
+.identity{
+	padding-top:50px;
+	overflow: hidden;
+}
+.num{
+	position: absolute;
+    top: 22px;
+    left: 24px;
+    color: #fff;
+}
+.msgDetail{
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	border-spacing:15px 15px
+}
+.revise{
+	padding-top: 200px;
+}
+.inputWidth{
+	width: 100%;
+}
+#bottom{
+	padding-bottom:100px;
+}
+.btnF{
+	width:100%;
+	text-align: center;
+	position: absolute;
+	bottom: 50px;
+}
+.cancle{
+	margin-right: 70px;
+}
+.tipsMsg{
+	width:70%;
+	margin: 0 auto;
+	text-align: left;
+}
+.tipsMsg span{
+	color: red;
+	font-size: 20px;
+}
+.numTel{
+	padding-top: 30px;
+	width:70%;
+	margin: 0 auto;
+	text-align: left;
+}
+.numMsg{
+	width:50%;
+	height: 30px;
+}
+.fl{
+	/*float: right;*/
+	width:50px;
+	margin: 0 auto;
+	text-align: center;
+		position: absolute;
+	bottom: 50px;
+	margin-left: 500px;
+}
+.isSure{
+	overflow: hidden;
+	position: relative;
+}
+.finisheda{
+	padding-top: 300px;
+	text-align: center;
+	position: relative;
+}
+.suc{
+	color: green;
+	font-size: 22px;
+}
+#msgD{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color: black;
+
+}
+.backbtn{
+
+    min-height: 80px;
+    /*margin-bottom: 5%;*/
+}
+.backcardPhoto{
+	position: fixed;
+	right: 0;
+	bottom: 0px;
+}
+.btn2 {
+    height: 80px;
+    min-width:50px;
+    margin: -2px 15px 0 15px;
+    /*border: 1px solid #ddd;*/
+    padding: 25px 0px 0px 0px;
+    background-color: #fafafa;
+    background-image: none;
+    filter: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    display: inline-block;
+    color: #646464;
+    text-shadow: none;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    line-height: normal;
+}
+.openCardFooter{
+	margin-top: 10px;
+}
+.ch{
+	height: 730px;
+}
+#finishBottom{
+	position: absolute;
+	bottom: 0px;
+}

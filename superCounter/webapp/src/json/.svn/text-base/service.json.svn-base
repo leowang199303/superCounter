@@ -1,0 +1,217 @@
+{
+	"actcard_service": {
+		"queryCard": {
+			"url": ":9001/padServer/OnlineCheckServer/queryCard",
+			"emo": "查询卡详情"
+		},
+		"singleCheck": {
+			"url": ":9001/padServer/OnlineCheckServer/singleCheck",
+			"emo": "联网核查"
+		},
+		"QuerySignProduct": {
+			"url": ":9001/padServer/BSProcessServer/_9affb8d6d80c58f3_process.BankSign.QuerySignProduct",
+			"emo": "查询产品明细"
+		},
+		"queryBlackList": {
+			"url": ":9001/padServer/OnlineCheckServer/queryBlackList",
+			"emo": "黑名单校验 "
+		},
+		"queryMessageCheck": {
+			"url": ":9001/padServer/OnlineCheckServer/queryMessageCheck",
+			"emo": "黑名单校验 "
+		},
+		"UPLOADFILE": {
+			"url": ":9006/padServer/UPLOADFILE",
+			"emo": "上传影像图片"
+		},
+		"TWScreateSerialNo": {
+			"url": ":9001/padServer/SimpleServer/TWScreateSerialNo",
+			"emo": "获取流水号"
+		},
+		"TranServer": {
+			"url": ":9001/padServer/TranServer/TX600101",
+			"emo": "开卡交易"
+		},
+		"QueryCardInfo":{
+		    "url":":9001/padServer/BSProcessServer/_9affb8d6d80c58f3_process.CustomerInfo.QueryCardInfo",
+		    "emo":"查询账号信息"
+		},
+		"NamingSqlCommonService": {
+		    "url":":9001/padServer/DataServer/NamingSqlCommonService",
+		    "emo":"查询交易流水"
+		},
+		"createVerifyCode":{
+		    "url":":9001/padServer/OnlineCheckServer/createVerifyCode",
+		    "emo":"获取手机验证码"
+		},
+		"TX600102":{
+		    "url":":9001/padServer/TranServer/TX600102",
+		    "emo":"提交修银行卡密码"
+		},
+		"CardPassWordVerify":{
+		    "url":":9001/padServer/BSProcessServer/_9affb8d6d80c58f3_process.UpdateBankPass.CardPassWordVerify",
+		    "emo":"验证银行卡密码"
+		},
+		"TX600103":{
+		    "url":":9001/padServer/TranServer/TX600103",
+		    "emo":"修改用户信息"
+		},
+		"TX600105":{
+		     "url":":9001/padServer/TranServer/TX600105",
+		     "emo":"密码重置"
+		},
+		"queryTopic":{
+		    "url":":9001/padServer/OnlineCheckServer/queryTopic",
+		    "emo":"风险评测试题"
+		},
+		"resultGrade":{
+		    "url":":9001/padServer/OnlineCheckServer/resultGrade",
+		    "emo":"风险评测答案提交"
+		},
+		"judgeIsResult":{
+		    "url":":9001/padServer/OnlineCheckServer/judgeIsResult",
+		    "emo":"判断是否做过风险评测"
+		},
+		"GainCustmerMessageShow":{
+		    "url":":9001/padServer/BSProcessServer/_9affb8d6d80c58f3_process.CustomerInfo.GainCustmerMessageShow",
+		    "emo":"用户信息查询"
+		},
+		"JudegSignPhoneBank":{
+		    "url":":9001/padServer/BSProcessServer/_9affb8d6d80c58f3_process.PhoneBankMessage.JudegSignPhoneBank",
+		    "emo":"判断是否签约手机银行"
+		},
+		"TX600106":{
+		    "url":":9001/padServer/TranServer/TX600106",
+		    "emo":"手机签约交易提交"
+		},
+		"TX600108":{
+		    "url":":9001/padServer/TranServer/TX600108",
+		    "emo":"手机签约重置密码"
+		},
+		"PhoneBankSignMess":{
+		    "url":":9001/padServer/BSProcessServer/_9affb8d6d80c58f3_process.PhoneBankMessage.PhoneBankSignMess",
+		    "emo":"获取手机银行签约信息"
+		},
+		"SignMessageShow":{
+		    "url":":9001/padServer/BSProcessServer/_9affb8d6d80c58f3_process.PhoneBankMessage.SignMessageShow",
+		    "emo":"获取手机银行签约信息"
+		},
+		"TX600107":{
+		    "url":":9001/padServer/TranServer/TX600107",
+		    "emo":"修改手机银行签约信息"
+		},
+		"TWScreateServiceSerialNo":{
+		    "url":":9001/padServer/SimpleServer/TWScreateServiceSerialNo",
+		    "emo":"获取服务流水号"
+		},
+		"RecommendMatProduct":{
+		    "url":":9001/padServer/BSProcessServer/_9affb8d6d80c58f3_process.MattersProduct.RecommendMatProduct",
+		    "emo":"获取推荐理财理财产品"
+		},
+		"TX600116":{
+		    "url":":9001/padServer/TranServer/TX600116",
+		    "emo":"购买理财产品"
+		},
+		"QueryFinanceProductAll":{
+		    "url":":9001/padServer/BSProcessServer/_9affb8d6d80c58f3_process.MattersProduct.QueryFinanceProductAll",
+		    "emo":"所有理财产品"
+		},
+		"TX600117":{
+		    "url":":9001/padServer/TranServer/TX600117",
+		    "emo":"转账"
+		},
+		"HomeCarouselPicture":{
+		    "url":":9001/padServer/BSProcessServer/_9affb8d6d80c58f3_process.HomeFuncPicture.HomeCarouselPicture",
+		    "emo":"获取首页轮播图"
+		},
+		"HomeServiceFunc":{
+		    "url":":9001/padServer/BSProcessServer/_9affb8d6d80c58f3_process.HomeFuncPicture.HomeServiceFunc",
+		    "emo":"获取服务功能"
+		},
+		"FiltrateConditionShow":{
+		    "url":":9001/padServer/BSProcessServer/_9affb8d6d80c58f3_process.MattersProduct.FiltrateConditionShow",
+		    "emo":"筛选条件"
+		},
+		"QueryFiltrateFinanceProduct":{
+		    "url":":9001/padServer/BSProcessServer/_9affb8d6d80c58f3_process.MattersProduct.QueryFiltrateFinanceProduct",
+		    "emo":"筛选理财产品"
+		},
+		"HomeServiceFunc":{
+		    "url":":9001/padServer/BSProcessServer/_9affb8d6d80c58f3_process.HomeFuncPicture.HomeServiceFunc",
+		    "emo":"获取功能选项"
+		},
+		"signatureImg":{
+		    "url":":9001/padServer/FileServer/signatureImg",
+		    "emo":"提交签名，身份这个链接"
+		},
+		"mock": {
+			"tang": true
+		},
+		"idCard": {
+			"name": "程振明",
+			"sex": "男",
+			"ethnicity": "汉族",
+			"birthday": "19901021", 
+			"address": "江西省乐平市涌山镇新农村11号", 
+			"idNumber": "410781199603184712", 
+			"authority": "乐平市公安局",
+			"expiryDate": "2007.08.09-2017.08.09",
+			"upPhoto": "null",
+			"bgPhoto": "null",
+			 "job":"java后台",
+			 "tel":"15300772891",
+			 "company":"北京联龙博通"			
+		},
+		"cardNumber":{
+		    "cardNo":"6224150000003889",
+		    "job":"java后台",
+			"company":"北京联龙博通",
+			"tel":"15300772891",
+			"name": "程振明",
+			"sex": "男",
+			"address": "江西省乐平市涌山镇新农村11号"
+		},
+        "ICCardInfoEntity":{
+            "track1" : "1",
+            "track2" : "2",
+            "track3" : "3",
+            "atr" :"ATR",
+            "cardNo":"6224150000003889"
+        },
+        "DealObj":{
+            "COH":{
+               "TRANSTELLER":"900001001",
+               "AUTHTELLER":"",
+               "AGENTINSTNO":"",
+               "WORKSTATIONIP":"",
+               "CHECKTELLER":"",
+               "branchId":"90001",
+               "globalSeqNo":"0000",
+               "TRANSTELLERPWD":"0000",
+               "TRANSCODE":"TX600104",
+               "orgName":"0000",
+               "SERVICESERIALNO":"0000",
+               "medium":"0000",
+               "consumerId":"301",
+               "TELLERWORKMODEL":"6",
+               "TRANSINSTNO":"CN0019009",
+               "TRANSAUTHNO":"",
+               "TRANSSTARTTIME":"",
+               "TRANSDATE":"",
+               "TRANSSERIALNO":"",
+               "TRANSTIME":""
+            },
+            "CTL":{
+               "TRANSMODELSERVICE":"TCM",
+               "TRANSMODEL":"5",
+               "RECORDNUM":"0",
+               "FILENAME":"",
+               "FUNCODE":"I",
+               "OPERATEMODEL":"6",
+               "PAGELENGTH":"20",
+               "PAGENO":"0"
+            
+            }
+        }
+	}
+}

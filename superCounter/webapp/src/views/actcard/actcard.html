@@ -1,0 +1,641 @@
+<!--<div class="sui-steps-round steps-round-auto" ng-show="pageflag != 0">
+    <div class="{{d.class}}" id="step" +{{d.num}} ng-repeat="d in bar track by $index">
+        <div class="wrap">
+            <div class="round">{{d.num}}</div>
+            <div class="bar" ng-show="!{{d.last}}"></div>
+        </div>
+        <label>{{d.text}}</label>
+    </div>
+</div>-->
+<!--<div class="theBig">-->
+<div class="proes clearfix" ng-show="openCard != 0">
+	<div class="procetu clearfix">
+		<div class="{{d.class}} procechild" id="step" +{{d.num}} ng-repeat="d in bar track by $index">
+			<div class="wrap">
+				<div class="proceround">
+					<img src="{{d.img}}">
+					<!--<div class="proceround"></div>-->
+					<!--<img src="./images/noselect.png" ng-if="pageflag !== finnery"  class="proceround">
+                    <img src="./images/select.png"  ng-if="pageflag == finnery"  class="proceround">-->
+					<div class="probarsfirst" ng-show="$index==0"></div>
+					<div class="probarslast" ng-show="$last"></div>
+					<div class="roundnum">{{d.num}}</div>
+					<div class="probars" ng-show="!{{d.last}}"></div>
+				</div>
+			</div>
+			<label class="processtitle">{{d.text}}</label>
+		</div>
+	</div>
+	<!--<div class="sui-steps-round steps-round-auto">
+        <div class="{{d.class}}" id="1" +{{d.num}} ng-repeat="d in bar track by $index">
+            <div class="wrap">
+                <div class="round">{{d.num}}</div>
+                <div class="bar" ng-show="!{{d.last}}"></div>
+            </div>
+            <label class="processtitle">{{d.text}}</label>
+        </div>
+    </div>-->
+</div>
+
+
+<!-- Large modal -->
+
+<div id="mask" class="mask">
+
+</div>
+
+<div class="cont">
+	<!-- 首页 -->
+
+	<div class="portlet-body opencards clearfix bgc" ng-show="openCard == 0">
+		<div class="opencardsone">
+
+			<div class="respect">
+				<span>尊敬的用户</span><span>欢迎您</span>
+			</div>
+			<div class="presentation">
+				七个步骤即可自助开通我行银行卡服务
+			</div>
+			<div class="process clearfix">
+				<div class="procetu clearfix">
+					<div class="{{d.class}} procechild" id="1" +{{d.num}} ng-repeat="d in bar track by $index">
+						<div class="wrap">
+							<div class="proceround">
+								<img src="./images/anniu.png" class="proceround">
+								<div class="probarsfirst" ng-show="$index==0"></div>
+								<div class="probarslast" ng-show="$last"></div>
+								<div class="roundnum">{{d.num}}</div>
+								<div class="probars" ng-show="!{{d.last}}"></div>
+							</div>
+						</div>
+						<label class="processtitle">{{d.text}}</label>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<a href="#/"></a>
+				</div>
+				<!--<div class="sui-steps-round steps-round-auto">
+                <div class="{{d.class}}" id="1" +{{d.num}} ng-repeat="d in bar track by $index">
+                    <div class="wrap">
+                        <div class="round">{{d.num}}</div>
+                        <div class="bar" ng-show="!{{d.last}}"></div>
+                    </div>
+                    <label class="processtitle">{{d.text}}</label>
+                </div>
+            </div>-->
+			</div>
+			<div class="yellocard clearfix">
+				<div class="opencardstyle" ng-click="card.cardOne()">
+					我要开卡
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- 选择卡片 -->
+	<div ng-if="openCard == 1" class="opencards clearfix needF bgc">
+		<div class="col-md-12 opencardstyle clearfix">
+			<div class="row">
+				<div class="col-md-4 cardboxes clearfix" ng-repeat="d in cardtype track by $index" ng-click="card.details(d)">
+					<div class="cardboxchild clearfix">
+						<div class="imgdiv clearfix">
+							<p class="cardname">
+								{{d.cardName}}
+							</p>
+							<img src="{{d.cardImg}}">
+						</div>
+						<div class="carboxtext">
+							<div ng-repeat="c in d.characteristic track by $index">
+								{{c}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="backbtn backCardK">
+				<a href="javascript:;" class="btn2" ng-click="card.backCardK()">
+					<i class="fa fa-arrow-circle-left fa-3x"></i>
+					<div class="beforeStep">
+						上一步
+					</div>
+				</a>
+			</div>
+		</div>
+
+	</div>
+	<!-- 卡片内容 -->
+	<div ng-if="openCard == 2" class="opencards clearfix bgc">
+		<div class="col-md-6 cardinfo">
+			<div class="cardinfoimg">
+				<img src="./assets/global/img/{{subFrom.carditem.pictureName}}.png" class="smimgdiv" />
+				<h1 class="float-left">{{subFrom.carditem.cardName}}</h1>
+			</div>
+			<div class="float-left  carddesign">
+				<p ng-repeat="c in subFrom.carditem.product track by $index">
+					<span class="espectial">特点{{$index+1}}：{{c.code}}</span>
+				</p>
+			</div>
+		</div>
+
+		<div class="col-md-6 cardinfo" style="padding:0 10%;">
+			<p ng-repeat="d in subFrom.carditem.details">&nbsp;&nbsp;{{d}}</p>
+		</div>
+
+		<div class="opencardss">
+
+			<button type="button" name="back" class="btn btn-set btnclear" ng-click="card.cancel()"> 取消
+                        </button>
+			<button type="button" name="back" class="btn btn-primary" ng-click="card.choseCard()"> 开卡
+                        </button>
+
+		</div>
+
+		<div class="backbtn backcardIF">
+			<a href="javascript:;" class="btn2" ng-click="card.backCardI()">
+				<i class="fa fa-arrow-circle-left fa-3x"></i>
+				<div class="beforeStep">
+					上一步
+				</div>
+			</a>
+		</div>
+
+	</div>
+	<!-- 身份审核 -->
+	<div ng-if="openCard == 3" class="opencards clearfix bgc">
+		<div class="identity">
+			<div class="col-md-12">
+				<div class="tishidivst" style="border: 1px solid #0b94ea">
+					<p>请将身份证放到指定区域</p>
+					<div class="tishidiv" style="background:#ccc " ng-click="card.open"></div>
+					<p>身份证读取中......</p>
+				</div>
+			</div>
+			<form class="form-horizontal" name="myform">
+				<div class="form-bodyform-body">
+					<!--<div class="form-group">
+					<label class="control-label col-md-4">姓名:<span ng-class="{required:myform.dict_key.$invalid}">*</span></label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" required name="name_code" ng-model="idc.name" />
+					</div>
+				</div>-->
+					<!--<div class="form-group">
+					<label class="control-label col-md-4">身份证号码:<span ng-class="{required:myform.dicts_kesy.$invalid}" >* </span></label>
+					<div class="col-md-5">
+						<input type="text" required name="name_info" class="form-control" ng-model="idc.vcherNo" />
+						<span style="color:red" ng-show="idc.vcherNo.length<18||idc.vcherNo.length>18&&idc.vcherNo.length>2">身份证号码不能低于18位</span>
+					</div>
+				</div>-->
+
+				</div>
+			</form>
+			<!--<div class="backbtn backcardPhoto">
+				<a href="javascript:;" class="btn2" ng-click="card.backCardID()">
+					<i class="fa fa-arrow-circle-left fa-3x"></i>
+					<div class="beforeStep">
+						上一步
+					</div>
+				</a>
+			</div>-->
+			<!--<div class="openout" ng-click="backhome()">
+			<img src="./images/out.png">
+			<div class="openback">
+				<span>退出</span>
+			</div>
+		</div>-->
+		</div>
+		<!--<div class="opencardss">
+			<button type="button" name="back" class="btn btn-primary" popover-trigger="mouseenter" ng-click="card.idcardsuccess()"> 开始验证
+             </button>
+		</div>-->
+	</div>
+	<!--身份审核通过-->
+	<div ng-if="openCard == 4" class="operinfo opencards clearfix bgc">
+		<div class="rightGett">
+			<div class="page-header">
+				<h1 class="cardtitle">身份证审核通过&nbsp;<em class="glyphicon glyphicon-ok-circle"></em></h1>
+			</div>
+		</div>
+		<div class="col-md-offset-2 col-md-8">
+			<div>
+				<div class="col-md-5   operytrue">
+					 
+					<img style="width: 330px;height: 200px" src="images/zeng.jpg" />
+					<!--<img style="width: 330px;height: 200px" src="images/zeng.jpg" />-->
+				</div>
+				<div class="col-md-5 col-md-offset-2 operytrue">
+					<img style="width: 330px;height: 200px" src="images/fan.jpg" />
+				</div>
+			</div>
+			<div class="col-md-12  operinfo">
+				<p class="wordsStyle">姓名: {{name}}</p>
+			</div>
+			<div class="col-md-12 operinfo">
+				<p class="wordsStyle">发证机关: {{authority}}</p>
+			</div>
+			<div class="col-md-12 operinfo">
+				<p class="wordsStyle">有效期: {{expiryDate}}</p>
+			</div>
+		</div>
+		<!--<div class="openout" ng-click="backhome()">
+			<img src="./images/out.png">
+			<div class="openback">
+				<span>退出</span>
+			</div>
+		</div>-->
+		<div class="col-md-offset-5 col-md-2 openCardIdMsgone">
+			<button type="button" ng-click="card.successnext()" class="btn blue btn-block">下一步</button>
+		</div>
+		<!--<div class="backbtn backcardPhoto">
+			<a href="javascript:;" class="btn2" ng-click="card.backCardIDMsg()">
+				<i class="fa fa-arrow-circle-left fa-3x"></i>
+				<div>
+					上一步
+				</div>
+			</a>
+		</div>-->
+
+	</div>
+	<!-- 视频拍照 -->
+	<div ng-if="openCard == 5" class="operinfo opencards clearfix bgc">
+		<div class="rightGett">
+			<div class="page-header">
+				<h1 class="cardtitle">
+                               请正脸对准摄像头,准备影像采集
+            </h1>
+			</div>
+		</div>
+		<div class="photoTips">
+
+			<div class="photoTips bor">
+
+			</div>
+		</div>
+		<div class="col-md-offset-5 col-md-2 openCardIdMsgone">
+			<button type="button" ng-click="card.getMsg()" class="btn blue btn-block">授权成功</button>
+		</div>
+		<div class="backbtn backcardPhoto">
+			<a href="javascript:;" class="btn2" ng-click="card.backCardPhoto()">
+				<i class="fa fa-arrow-circle-left fa-3x"></i>
+				<div class="beforeStep">
+					上一步
+				</div>
+			</a>
+		</div>
+
+	</div>
+	<!-- 信息录入 -->
+	<div ng-if="openCard == 6" class="infoipport opencards clearfix bgc">
+		<form class="form-horizontal wannaTopOn">
+			<div class="form-bodyform-body">
+				<div class="form-group">
+					<label class="control-label col-md-4">姓名:</label>
+					<div class="col-md-5" ng-init="subFrom.personDetails.personName = name">
+						<input type="text" readonly class="form-control" ng-model="subFrom.personDetails.personName" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-md-4">性别:</label>
+					<div class="col-md-5" ng-init="subFrom.personDetails.personGender = sex">
+						<input type="text" class="form-control" readonly ng-model="subFrom.personDetails.personGender" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-md-4">联系地址:</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" ng-model="subFrom.personDetails.address" />
+						<span style="color: red;"></span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-md-4">职业:</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" ng-model="subFrom.personDetails.job" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-md-4">公司名称:</label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" ng-model="subFrom.personDetails.companyName" />
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-md-4">电话:<span style="color: red;"> * </span></label>
+					<div class="col-md-5">
+						<input type="text" class="form-control" ng-model="subFrom.personDetails.phone" ng-change="card.telNum()" ng-focus="card.inputGet()">
+						<span style="color: red;" ng-if="telStyle">请输入正确的手机号码</span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-md-4">验证码:</label>
+					<div class="col-md-5 inF">
+						<span id="inOne">
+							<input type="text" class="form-control" ng-model="subFrom.vCode" ng-readonly="isDisabledz"/>
+						<div style="color: red;" ng-if="isCodeRight">验证码不正确</div>
+						</span>
+						<span id="inTwo">
+							<button type="button" ng-click="card.validateph()" ng-class="{true:'btn blue',false:'btn btn-primary'}[isActive]" ng-disabled="isDisabled">{{title1}}</button>
+						</span>
+					</div>
+				</div>
+			</div>
+		</form>
+		<div class="openCardGetMsg">
+			<button type="button" ng-click="card.msgOver()" class="btn blue openCardGM">下一步</button>
+		</div>
+		<div class="backbtn backcardPhoto">
+			<a href="javascript:;" class="btn2" ng-click="card.backCardInMsg()">
+				<i class="fa fa-arrow-circle-left fa-3x"></i>
+				<div class="beforeStep">
+					上一步
+				</div>
+			</a>
+		</div>
+		<!--<div class="openout" ng-click="backhome()">
+			<img src="./images/out.png">
+			<div class="openback">
+				<span>退出</span>
+			</div>
+		</div>-->
+
+	</div>
+	<!-- 产品签约 -->
+	<div ng-if="openCard == 7" class="bgc product opencards clearfix  " id="switchOff">
+		<div class="telPhone">
+			<div class="col-md-12 flexNeed">
+				<div class=" productbox" ng-repeat="d in productList track by $index" ng-init="outerIndex = $index">
+					
+					<div>
+						<div class="productinnet">
+							<h1 class="producttext">{{d.productName}}</h1>
+						</div>
+					</div>
+					
+					<div>
+						<div class="form-group productcheck">
+							<!--<label>请按需勾选</label>-->
+							<div class="checkbox-list">
+								<label ng-repeat="c in d.option" ng-init="inerIndex = $index">
+                            <div class="switch  clearfix">
+                            	<div class="switchLeft">{{c.optionName}}</div>
+                            	<div class="switchRight myswitch" >
+                            		<input type="checkbox" value="{{c.optionName}}" productName="{{d.productName}}" optionValue="{{c.optionValue}}" class="chec_{{outerIndex}}_{{inerIndex}}" data-size="mini" data-on-text="<i class='glyphicon glyphicon-ok'></i>" data-off-text="<i></i>">
+                            	</div>
+                            	<div class="limit selec_{{outerIndex}}_{{inerIndex}}">
+                            		<br />
+                            		<div class="clearfix">
+                            			<div class="switchLeft">                            				
+                            			</div>       
+                            			    <input type="text" class="one_{{outerIndex}}_{{inerIndex}}" placeholder="单笔限额(元)"/>
+                            			    <p style="color:red;display: none;" class="oneShow_{{outerIndex}}_{{inerIndex}}">请输入数字</p>	                            			
+                            		</div>
+                            		<br />
+                            		<p>
+                            			<input type="text" class="day_{{outerIndex}}_{{inerIndex}}" placeholder="日累计限额(元)"/>
+                            			<p style="color:red;display: none;" class="dayShow_{{outerIndex}}_{{inerIndex}}">请输入数字</p>
+                            		</p>
+                            		
+                            	</div>
+<script type="text/javascript">
+	var selectOption = [];
+	var removeArr = [];
+	var list = JSON.parse(sessionStorage.getItem("list"));
+	
+	$(".myswitch input").on('switchChange.bootstrapSwitch', function(event, state) {
+		var product = $(this).attr('value'); //获取点击的业务名称
+		var className = $(this).attr('class'); //获取它的类
+		var classNameKey = className.split('_'); //获取索引
+		console.log(classNameKey)
+		if(state) {
+			if(classNameKey[2] != 0) {
+				if(product.indexOf('限额')>=0){
+					console.log($(this).parent().next())
+					$('.selec_'+classNameKey[1]+'_'+classNameKey[2]).css('display','block');
+				}
+				if(!$('.chec_' + classNameKey[1] + '_0').bootstrapSwitch('state')) { //check if is not checked
+					$('.chec_' + classNameKey[1] + '_0').bootstrapSwitch('toggleState'); //change the checkbox state
+				}
+				selectOption.push(className);
+			}
+						
+			//点击选中，修改为true
+			for (var i = 0; i < list.length; i++) {					
+				if(i == classNameKey[1]){	//打开哪一项，哪一项设置为true
+					
+				    if(classNameKey[2] != 0){ //打开的项不是第一项的话，第一项要设置为true							   
+				        list[i].option[0].isOpen = true;					  
+				    }
+					
+					for (var j = 0; j <list[i].option.length; j++) {
+					   if(j == classNameKey[2]){
+					   	 list[i].option[j].isOpen = true;
+					   }
+				    }
+				}					
+			}			
+		} else {
+			if(product.indexOf('限额')>=0){
+			   $('.selec_'+classNameKey[1]+'_'+classNameKey[2]).css('display','none');
+		    }
+			for(var i = 0; i < selectOption.length; i++) {
+				if(removeArr.indexOf(selectOption[i]) == -1) {
+					removeArr.push(selectOption[i])
+				}
+			}
+			if(classNameKey[2] == 0) {
+				for(var i = 0; i < removeArr.length; i++) {
+					var arrItem = removeArr[i].split('_');
+					console.log(className[1])
+					if(arrItem[1] == classNameKey[1]) {
+						if($('.' + removeArr[i]).bootstrapSwitch('state')) {
+							$('.' + removeArr[i]).bootstrapSwitch('toggleState')
+						}
+						if($('.chec_' + classNameKey[1] + '_0').bootstrapSwitch('state')) { //check if is not checked
+							$('.chec_' + classNameKey[1] + '_0').bootstrapSwitch('toggleState'); //change the checkbox state
+						}
+					}
+				}
+			}
+			//点击取消选中，修改为false
+			for (var i = 0; i < list.length; i++) {				
+				if(i == classNameKey[1]){ //关闭的项如果不是第一项的话，哪个被点击了哪个设置false
+					if(classNameKey[2] == 0){	//关闭的项如果是第一项的话，下面的所有都设为false								   
+					    for (var j = 0; j <list[i].option.length; j++) {
+					   	   list[i].option[j].isOpen = false;	  
+				        }					  
+				    }
+					
+					for (var j = 0; j <list[i].option.length; j++) {
+					   if(j == classNameKey[2]){
+					   	 list[i].option[j].isOpen = false;
+					   }
+				    }
+				}					
+			}									
+		}
+		
+		sessionStorage.setItem("listCheck",JSON.stringify(list))
+	})
+		sessionStorage.setItem("listCheck",JSON.stringify(list))
+</script>
+                            </div>
+                            
+                        </label>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+		<div class="col-md-12 probutton">
+			<div class="col-md-offset-5 col-md-2">
+				<button type="button" ng-click="card.sign(outerIndex)" class="btn blue btn-block">确认签约</button>
+			</div>
+		</div>
+	</div>
+	<!-- 信息确认 -->
+	<div ng-if="openCard == 8" class="infocheck opencards clearfix bgc" id="domeId">
+		<div class="infosuccess clearfix">
+			<div class="infoqueh">
+				<p class="wordsStyle ">尊敬的用户：{{subFrom.idcard.name}}</p>
+				<p class="wordsStyle ">您即将开立我行 <span style="color:#ad7b04;">{{subFrom.carditem.cardName}}</span></p>
+				<p ng-if="showTips" class="wordsStyle ">包括开通以下业务:</p>
+				<div ng-repeat="d in options" class="infodict" ng-init="count = $index">
+					<span style="color: black;margin-top:100px;font-size: 20px;">{{d.productName}}</span>
+					<br />
+					<div ng-repeat=" p in d.productOptions" ng-init="counter = $index">
+						<span class="oneCount_{{count}}_{{counter}}" style="font-size: 20px;">单笔限额：{{p.oneCount}}元</span>
+						<span class="dayCount_{{count}}_{{counter}}" style="font-size: 20px;">日累积限额：{{p.dayCount}}元</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="infoqm">
+				<div class="mt clearfix">
+					<p class="wordsStyle" style="text-align: center;">请签名</p>
+					<div class="infodiv js-signature" data-width="400" data-height="300" data-border="1px solid #4d4d4d" data-line-color="black" data-auto-fit="true">
+
+					</div>
+					<div id="clearBtn">
+						<button ng-click="card.clearCanvas();" class="btn blue cancleSignBtn">撤销</button>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="inofnexxt" style="text-align: center;">
+
+			<button type="button" class="btn blue" ng-click="card.rightMsg()" data-toggle="modal">确认</button>
+		</div>
+	</div>
+</div>
+
+<div class="passwordsucc bgc">
+	<div class="page-header">
+		<h1 class="cardtitle">
+                               请输入账户密码，该密码将用于账务查询、转账、支付等功能！
+        </h1>
+	</div>
+
+	<form class="form-horizontal" name="myform">
+		<div class="form-bodyform-body clearfix" style="margin-top: 100px;">
+			<div class="col-md-12 ">
+				<div class="col-md-6 col-md-offset-4 ">
+					<div class="form-group clearfix">
+						<label class="control-label col-md-4 wordsStyle" style="margin-top: -10px;">账户密码<span style="color:red;">*</span>：</label>
+						<div class="col-md-6">
+							<input type="password" ng-model="tssOpenCard.setPassword" ng-change="setPassword()" placeholder="请输入六位数字" />
+							<br />
+							<p style="color: red;margin-top: 10px;margin-bottom: 0px;" ng-if="enterCount">请输入六位数字</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12 ">
+				<div class="col-md-6 col-md-offset-4">
+					<div class="form-group clearfix">
+						<label class="control-label col-md-4 wordsStyle" style="margin-top: -10px;">确认密码<span style="color: red;">*</span>：</label>
+						<div class="col-md-6">
+							<input type="password" ng-model="tssOpenCard.repassWord" ng-change="checkAgain()" />
+							<br />
+							<p style="color: red;margin-top: 10px;margin-bottom: 0px;" ng-show="checkPass">{{openMsgOne}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--模态框-->
+			<!--<button class="btn" id="showModel">模态框展示</button>-->
+		</div>
+
+	</form>
+	<!--<div class="openout" ng-click="backhome()">
+			<img src="./images/out.png">
+			<div class="openback">
+				<span>退出</span>
+			</div>
+		</div>-->
+	<div class="makeSurePWD">
+		<button type="button" name="back" class="btn blue btnStyle" popover-trigger="mouseenter" ng-click="card.showB()"> 确认密码  </button>
+		<!--<button type="button" name="back" class="btn" ng-show="checkPass  == false" ng-disabled="checkPass" popover-trigger="mouseenter"> 确认密码
+                       </button>-->
+	</div>
+</div>
+<!-- 设置密码 -->
+<div ng-show="openCard == 9" class="opencards clearfix bgc">
+
+</div>
+<!-- 开户成功 -->
+<div class="get-right-open-card bgc">
+	<div class="rightGet">
+		<div class="page-header">
+			<h1 class="cardtitle">
+                                   请柜员进行授权&nbsp;&nbsp;&nbsp;<span style="color: red;">{{sucessMsg}}</span>
+           </h1>
+		</div>
+	</div>
+
+	<div class="open-card-Fa">
+		<div>
+			<p class="wordsStyle">授权账号<span style="color: red;">*</span>：<input type="text" ng-model="tss.count" class="inputWidths" /></p>
+			<p ng-if="pwd" class="wordsStyle" style="margin-top: 40px;">授权密码<span style="color: red;">*</span>：<input type="password" ng-model="tss.pwd" class="inputWidths" /></p>		
+		</div>
+	</div>
+
+	<div class="open-card-footer">
+		<!--<button id="cancel" ng-clik="cardCancle()" class="btn btn blue">取消</button>-->
+		<button id="sure" ng-click="card.sureCard(tss)" class="btn btn blue btnStyle">确定</button>
+	</div>
+</div>
+<div class="bgc" ng-show="openCard == 10">
+
+</div>
+
+<div ng-show="openCard == 11" class="opencards clearfix bgc">
+	<div class="opencomplete clearfix">
+		<div class="col-md-12 opencard">
+			<h1>尊敬的客户，您已成功开户！</h1>
+			<h2>请妥善保管银行卡以及账户密码，谨防网络欺诈！</h2>
+			<h2>您的卡号为<span>{{cardNum}}</span></h2>
+		</div>
+		<div class="col-md-12 opencard">
+			<div style="text-align:center" ng-click="card.exitYW()">
+				<a href="javascript:;" class="btn2 advertitle">
+					<i class="fa fa-arrow-circle-right fa-3x"></i>
+					<div class="advertext">退出业务</div>
+				</a>
+			</div>
+		</div>
+        <div ng-include="'tpl/finishBottom.html'">
+        	
+        </div>
+	</div>
+</div>
+</div>
+<div class="openCardFooter">
+	<div ng-include="'tpl/timer.html'" id="openCardTimer" ng-if="openCard == 3 || openCard == 11"></div>
+	<div ng-include="'tpl/footer.html'" ng-click="card.clean()"></div>
+</div>
+<!--</div>-->
+<script type="text/javascript" src="./assets/plugins/jq-signature.js"></script>
+<!--<script src="./assets/plugins/bootstrap/js/bootstrap-switch.min.js"></script>-->

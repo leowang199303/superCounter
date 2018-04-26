@@ -1,0 +1,693 @@
+@charset "UTF-8";
+$headtop:25px;
+$relative:relative;
+@mixin absolute($top,$left){
+  position: absolute;
+  top:$top;
+  left:$left;
+}
+
+@mixin margintop($top){
+  margin-top:$top;
+}
+
+
+
+/*头部样式*/
+.header{
+  margin-top:$headtop;
+  position: $relative;
+  height: 84px;
+  margin-bottom: 18px;
+  .log{
+    @include  absolute(13px,248px)
+  }
+  .active{
+    height: 80px;
+    width: 700px;
+    @include  absolute(0px,540px);
+    .box{
+      padding-right: 87px;
+      height: 80px;
+      line-height:80px;
+      @include  absolute(0px,125px);
+      li{
+        width: 56px;
+        float: left;
+        margin-right:41px;
+        text-align: center;
+        a{
+          text-decoration:none;
+          img{
+            display: inline-block;
+            margin:16px 0 10px 0;
+          }
+          p{
+            color:#fff;
+            font-size:18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 首页样式 */
+.dashboard{
+  width: 100%;
+  padding: 0  87px;
+  /* 轮播样式 */
+  .rotation{
+    .carousel-indicators{
+      //top:353px;
+      top:325px;
+      li{
+        border:1px solid #293c8f;
+      }
+      .active{
+        background: #293c8f;
+      }
+    }
+
+  }
+  /*卡片样式*/
+  .card{
+    @include  margintop(30px);
+    overflow: hidden;
+    width: 100%;
+    .card-overfloo{
+      .card-top{
+        .card-3{
+          //width: 360px;
+          width: 348px;
+          height: 188px;
+          float: left;
+          margin-right:15px;
+          background: #fff;
+          .cardbox{
+            margin:0 auto;
+            text-align: center;
+            img{
+              @include  margintop(52px);
+              margin-bottom:20px;
+            }
+            p{
+              font-size: 26px;
+              color:#293c8f;
+            }
+          }
+        }
+        .card-3:nth-last-child(-n+3){
+          margin-top:15px;
+        }
+        .fabricImg1{
+          background: url("../images/bg.png") center center no-repeat;
+        }
+      }
+      .card-bottom{
+        @include  margintop(15px);
+        .card-2{
+          //width: 266px;
+          width: 259px;
+          height: 190px;
+          float: left;
+          background: #fff;
+          margin-right:15px;
+          .cardbox{
+            margin:0 auto;
+            text-align: center;
+            img{
+              @include  margintop(52px);
+              margin-bottom:20px;
+            }
+            p{
+              font-size: 26px;
+              color:#293c8f;
+            }
+          }
+        }
+        .card-2:nth-last-child(-n+4){
+          margin-top:15px;
+        }
+        .fabricImg2{
+          background: url("../images/fbj.png") center center no-repeat;
+        }
+      }
+    }
+
+  }
+}
+
+//固定流程图
+.proes{
+  position: absolute;
+  top: 152px;
+  left:139px;
+  .procetu{
+    width: 100%;
+    .procechild{
+      float: left;
+      text-align: center;
+      position: relative;
+      .wrap{
+        .proceround {
+          width: 70px;
+          height: 70px;
+          position: relative;
+          margin-right: 50px;
+          //图片
+          img{
+            height: 70px;
+            width: 70px;
+          }
+          //最开始的线
+          .probarsfirst{
+            position: absolute;
+            width: 163px;
+            background: #adaeaf;
+            height: 3px;
+            top: 31px;
+            left:-158px;
+          }
+          //最后一条线
+          .probarslast{
+            position: absolute;
+            width: 163px;
+            background: #adaeaf;
+            height: 3px;
+            top: 31px;
+            right:-154px;
+          }
+          //序号文字
+          .roundnum{
+            position: absolute;
+            top:22px;
+            left: 28px;
+            color: #fff;
+          }
+          //线条
+          .probars{
+            position: absolute;
+            width: 77px;
+            background: #adaeaf;
+            height: 3px;
+            left: 57px;
+            top: 31px;
+          }
+
+        }
+      }
+
+    }
+    .procechild:first-child{
+      padding-left:106px;
+    }
+  }
+  //内容文字
+  .processtitle{
+    @include  margintop(10px);
+    font-size: 20px;
+    color:#4d4d4d;
+    margin-left:-54px;
+  }
+}
+
+
+/*我要开卡样式*/
+.opencards{
+  margin: -2px 90px 0px 88px;
+  /*height: 540px;*/
+  background: #fff;
+  overflow: auto;
+  min-height: 500px;
+  //第一个页面
+  .opencardsone{
+    height: 500px;
+    position: relative;
+    //欢迎语
+    .respect{
+      @include  margintop(49px);
+      margin-left:35px;
+      span:nth-child(1){
+        font-size: 25px;
+        color: #5f6165;
+      }
+      span:last-child{
+        font-size: 26px;
+        margin-left:15px;
+        color:#ad7b04;
+      }
+    }
+    //流程提示
+    .presentation{
+      margin:91px 0 48px 0;
+      color:#9c9a9a;
+      font-size: 24px;
+      text-align: center;
+    }
+    //流程
+    .process{
+      @include  margintop(48px);
+      margin-bottom: 66px;
+      .procetu{
+        width: 100%;
+        padding:0 44px 0 45px;
+      .procechild{
+        float: left;
+        text-align: center;
+        position: relative;
+        .wrap{
+        .proceround {
+          width: 70px;
+          height: 70px;
+          position: relative;
+          margin-right: 50px;
+          //图片
+          img{
+            height: 70px;
+            width: 70px;
+          }
+          //最开始的线
+          .probarsfirst{
+            position: absolute;
+            width: 116px;
+            background: #adaeaf;
+            height: 3px;
+            top: 31px;
+            left:-106px;
+          }
+          //最后一条线
+          .probarslast{
+            position: absolute;
+            width: 116px;
+            background: #adaeaf;
+            height: 3px;
+            top: 31px;
+            right:-103px;
+          }
+          .roundnum{
+            position: absolute;
+            top:22px;
+            left: 28px;
+            color: #fff;
+          }
+          //线条
+          .probars{
+            position: absolute;
+            width: 77px;
+            background: #adaeaf;
+            height: 3px;
+            left: 57px;
+            top: 31px;
+          }
+
+        }
+        }
+
+      }
+        .procechild:first-child{
+          padding-left:106px;
+        }
+      }
+      .processtitle{
+        @include  margintop(20px);
+        font-size: 19px;
+        color:#4d4d4d;
+        margin-left:-54px;
+      }
+    }
+    //开卡样式
+    .yellocard{
+      width: 100%;
+      .opencardstyle{
+        width: 300px;
+        background: #fccf00;
+        height: 66px;
+        margin:0 auto;
+        text-align: center;
+        line-height:66px;
+        font-size: 26px;
+      }
+    }
+    .yellocard:hover{
+      cursor:pointer;
+    }
+    //返回首页页面
+    .openhom{
+      position: absolute;
+      bottom:-65px;
+      cursor: pointer;
+      img{
+        float: left;
+      }
+      .openback{
+        width: 100%;
+        padding-top: 18px;
+        padding-left: 66px;
+        span{
+          font-size: 20px;
+          display: inline-block;
+          color: #adaeaf;
+        }
+        }
+    }
+  }
+  //第二个页面 卡片样式
+  .opencardstyle{
+      margin-top:95px;
+      padding: 0 60px;
+      position: relative;
+//     height: 500px;
+    .cardboxes{
+      background: url("../images/conent.png") center  no-repeat;
+      padding: 28px 54px 24px 54px;
+      .cardboxchild{
+          .imgdiv{
+            .cardname{
+              margin-bottom: 5px;
+              margin-top: 12px;
+              font-weight:bold;
+              font-size: 18px;
+              color: #000000;
+            }
+            text-align: center;
+            img{
+              margin-top:10px;
+              width: 192px;
+              height: 116px;
+            }
+          }
+        .carboxtext{
+          margin-top:10px;
+          margin-bottom: 24px;
+          line-height:20px;
+          color: #000;
+          overflow: hidden;
+          text-align: center
+        }
+      }
+    }
+    //退出样式
+    .openout{
+      position: absolute;
+      bottom:-78px;
+      right: 0px;
+      cursor: pointer;
+      img{
+        float: left;
+      }
+      .openback{
+        width: 100%;
+        padding-top: 18px;
+        padding-left: 66px;
+        span{
+          font-size: 20px;
+          display: inline-block;
+          color: #adaeaf;
+        }
+      }
+    }
+  }
+  //第三个页面 卡片详情
+  .cardinfo{
+    margin-top:120px;
+    min-height: 500px;
+    position: relative;
+    //退出样式
+    .openout{
+      position: absolute;
+      bottom:-78px;
+      right: 0px;
+      cursor: pointer;
+      img{
+        float: left;
+      }
+      .openback{
+        width: 100%;
+        padding-top: 18px;
+        padding-left: 66px;
+        span{
+          font-size: 20px;
+          display: inline-block;
+          color: #adaeaf;
+        }
+      }
+    }
+  }
+  //第四个页面 身份审核
+  .identity{
+    margin-top:95px;
+    min-height: 500px;
+    position: relative;
+    //退出样式
+    .openout{
+      position: absolute;
+      bottom:-78px;
+      right: 0px;
+      cursor: pointer;
+      img{
+        float: left;
+      }
+      .openback{
+        width: 100%;
+        padding-top: 18px;
+        padding-left: 66px;
+        span{
+          font-size: 20px;
+          display: inline-block;
+          color: #adaeaf;
+        }
+      }
+    }
+  }
+
+  //第五个页面 身份审核通过
+  .identityOK{
+    margin-top:95px;
+    min-height: 500px;
+    position: relative;
+    //退出样式
+    .openout{
+      position: absolute;
+      bottom:-78px;
+      right: 0px;
+      cursor: pointer;
+      img{
+        float: left;
+      }
+      .openback{
+        width: 100%;
+        padding-top: 18px;
+        padding-left: 66px;
+        span{
+          font-size: 20px;
+          display: inline-block;
+          color: #adaeaf;
+        }
+      }
+    }
+  }
+
+  //第六个页面  视频拍照
+  .pictures{
+    margin-top:95px;
+    min-height: 500px;
+    position: relative;
+    //退出样式
+    .openout{
+      position: absolute;
+      bottom:-78px;
+      right: 0px;
+      cursor: pointer;
+      img{
+        float: left;
+      }
+      .openback{
+        width: 100%;
+        padding-top: 18px;
+        padding-left: 66px;
+        span{
+          font-size: 20px;
+          display: inline-block;
+          color: #adaeaf;
+        }
+      }
+    }
+  }
+
+  //第七个页面 信息录入
+  .information{
+    margin-top:125px;
+    min-height: 500px;
+    position: relative;
+    //退出样式
+    .openout{
+      position: absolute;
+//    bottom:-141px;
+      right: 0px;
+      cursor: pointer;
+      img{
+        float: left;
+      }
+      .openback{
+        width: 100%;
+        padding-top: 18px;
+        padding-left: 66px;
+        span{
+          font-size: 20px;
+          display: inline-block;
+          color: #adaeaf;
+        }
+      }
+    }
+  }
+
+  //第八个页面  产品签约
+  .produc{
+    margin-top:95px;
+    min-height: 500px;
+    position: relative;
+    //退出样式
+    .openout{
+      position: absolute;
+      bottom:-78px;
+      right: 0px;
+      cursor: pointer;
+      img{
+        float: left;
+      }
+      .openback{
+        width: 100%;
+        padding-top: 18px;
+        padding-left: 66px;
+        span{
+          font-size: 20px;
+          display: inline-block;
+          color: #adaeaf;
+        }
+      }
+    }
+  }
+
+  //第九个页面  信息确认
+  .infosuccess{
+    margin-top:125px;
+    min-height: 500px;
+    position: relative;
+    //退出样式
+    .openout{
+      position: absolute;
+      bottom:-78px;
+      right: 0px;
+      cursor: pointer;
+      img{
+        float: left;
+      }
+      .openback{
+        width: 100%;
+        padding-top: 18px;
+        padding-left: 66px;
+        span{
+          font-size: 20px;
+          display: inline-block;
+          color: #adaeaf;
+        }
+      }
+    }
+  }
+
+
+  //第十个页面 设置密码
+  .passwordsucc{
+    margin-top:125px;
+    min-height: 500px;
+    position: relative;
+    .cardtitle{
+      color:lawngreen;
+      font-weight:normal;
+      font-size:22px;
+      margin-left:10px;
+    }
+    //退出样式
+    .openout{
+      position: absolute;
+      bottom:-78px;
+      right: 0px;
+      cursor: pointer;
+      img{
+        float: left;
+      }
+      .openback{
+        width: 100%;
+        padding-top: 18px;
+        padding-left: 66px;
+        span{
+          font-size: 20px;
+          display: inline-block;
+          color: #adaeaf;
+        }
+      }
+    }
+  }
+
+  //第十一个页面 开卡完成
+  .opencomplete{
+    margin-top:125px;
+    min-height: 500px;
+    position: relative;
+    //开卡完成提示语
+    h1{
+      color:green;
+      font-size: 22px;
+    }
+    h2{
+      color:red;
+      font-size: 22px;
+    }
+    //广告栏文字样式
+    .advertitle{
+      .advertext{
+        font-size: 16px;
+        margin-top:5px;
+      }
+    }
+    .advertitle:hover{
+      text-decoration:none;
+    }
+    //退出样式
+    .openout{
+      position: absolute;
+      bottom:-78px;
+      right: 0px;
+      cursor: pointer;
+      img{
+        float: left;
+      }
+      .openback{
+        width: 100%;
+        padding-top: 18px;
+        padding-left: 66px;
+        span{
+          font-size: 20px;
+          display: inline-block;
+          color: #adaeaf;
+        }
+      }
+    }
+  }
+
+}
+
+
+
+
+//第二个页面 我要开卡背景
+/*.opencardtwo{
+  margin: -2px 90px 0px 88px;
+  height: 540px;
+  background: #edf9ff;
+  border:1px solid red;
+}*/
+
+
+

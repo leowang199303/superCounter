@@ -1,0 +1,105 @@
+
+<div class="dashboard" ng-controller="dash_controller">
+ 	<!--<loading></loading>-->		
+	<div class="rotation">		
+		<div id="myCarousel" class="carousel slide" style="height: 334px;">			 
+			<ol class="carousel-indicators" style="margin-left: 0px;">			 
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner">				
+				<div  ng-repeat=" c in carousell"  ng-class="{true:'active item',false:'item'}[$index == 0]">
+					<img src="{{c.carouselPictureUrl}}">
+				</div>				
+			</div>
+		</div>
+		      
+		<script>
+			$(document).ready(function() {
+				$('#myCarousel').carousel({
+					interval: 2000,
+					wrap: true
+		    	});
+			});
+		</script>
+	</div>
+	<!--card-->
+	<!--style="height: 40%;"-->
+	<div class="card">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<!-- 第一屏内容-->
+				<div class="swiper-slide card-overfloo">
+					<div class="card-top clearfix cardAll">
+						<!--利用ng-show来控制显示方式，第一屏只显示索引小于3和4的  第二批显示索引大于3和4的-->
+						<div class="card-3" ng-repeat="d in func track by $index" ng-show=" $index < 3" ng-click="cardtop($index)" ng-class="{fabricImg1:$index==fabricIsSelected}">
+							<div class="cardbox">
+								<img src="{{d.serviceLogo}}" alt="">
+								<p>{{d.serviceName}}</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="card-bottom clearfix cardAll">
+						<div class="card-2" ng-repeat="d in func track by $index " ng-show="$index > 2  && $index < 7" ng-click="cardtop($index)" ng-class="{fabricImg2:$index==fabricIs2Selected}">
+							<div class="cardbox">
+								<img src="{{d.serviceLogo}}" alt="">
+								<p>{{d.serviceName}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!--第二屏内容,全大图标-->
+				<div class="swiper-slide card-overfloo">
+					
+					<div class="card-top clearfix cardAll">
+						<!--利用ng-show来控制显示方式，第一屏只显示索引小于3和4的  第二批显示索引大于3和4的-->
+						<div class="card-3" ng-repeat="d in func track by $index" ng-show="$index > 6  && $index < 11" ng-class="{fabricImg1:$index==fabricIsSelected}" ng-click="cardtop($index)">
+							<div class="cardbox">
+								<img src="{{d.serviceLogo}}" alt="">
+								<p>{{d.serviceName}}</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="card-bottom clearfix cardAll">
+						<div class="card-2" ng-repeat="d in func track by $index " ng-show="$index > 10 && $index < 15" ng-class="{fabricImg2:$index==fabricIs2Selected}"  ng-click="cardtop($index)">
+							<div class="cardbox">
+								<img src="{{d.serviceLogo}}" alt="">
+								<p>{{d.serviceName}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--第三屏内容,全小图标-->
+				<div class="swiper-slide card-overfloo">
+					<div class="card-top clearfix cardAll">
+						<!--利用ng-show来控制显示方式，第一屏只显示索引小于3和4的  第二批显示索引大于3和4的-->
+						<div class="card-3" ng-repeat="d in card3repeat track by $index" ng-show="$index<3" ng-class="{fabricImg1:$index==fabricIsSelected}">
+							<div class="cardbox">
+								<img src="{{d.src}}" alt="">
+								<p>{{d.text}}</p>
+							</div>
+						</div>
+					</div>
+					<div class="card-bottom clearfix cardAll">
+						<div class="card-2" ng-repeat="d in cardbuttonrepeat track by $index " ng-show="$index<4" ng-class="{fabricImg2:$index==fabricIs2Selected}">
+							<div class="cardbox">
+								<img src="{{d.src}}" alt="">
+								<p>{{d.text}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--初始化swiper-->
+		<script>
+			var swiper = new Swiper('.swiper-container');
+		</script>
+	</div>
+</div>
+<!-- END MAIN CONTENT -->
+	

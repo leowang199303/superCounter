@@ -1,0 +1,875 @@
+@charset "UTF-8";
+
+/*头部样式*/
+
+.header {
+	margin-top: 63px;
+	position: relative;
+	height: 84px;
+	margin-bottom: 37px;
+}
+
+.header .log {
+	position: absolute;
+	top: 13px;
+	left: 248px;
+}
+
+.header .active {
+	height: 80px;
+	width: 700px;
+	position: absolute;
+	top: 0px;
+	left: 540px;
+}
+
+.header .active .box {
+	padding-right: 87px;
+	height: 80px;
+	line-height: 80px;
+	position: absolute;
+	top: 0px;
+	left: 125px;
+}
+
+.header .active .box li {
+	width: 56px;
+	float: left;
+	margin-right: 41px;
+	text-align: center;
+}
+
+.header .active .box li a {
+	text-decoration: none;
+}
+
+.header .active .box li a img {
+	display: inline-block;
+	margin: 16px 0 10px 0;
+}
+
+.header .active .box li a p {
+	color: #fff;
+	font-size: 18px;
+}
+
+
+/* 首页样式 */
+
+.dashboard {
+	width: 100%;
+	padding: 0 87px;
+	/* 轮播样式 */
+	/*卡片样式*/
+}
+
+.dashboard .rotation .carousel-indicators {
+	top: 325px;
+}
+
+.dashboard .rotation .carousel-indicators li {
+	border: 1px solid #293c8f;
+}
+
+.dashboard .rotation .carousel-indicators .active {
+	background: #293c8f;
+}
+
+.dashboard .card {
+	margin-top: 30px;
+	overflow: hidden;
+	width: 100%;
+}
+
+.dashboard .card .card-overfloo .card-top .card-3 {
+	width: 348px;
+	height: 188px;
+	float: left;
+	margin-right: 15px;
+	background: #fff;
+}
+
+.dashboard .card .card-overfloo .card-top .card-3 .cardbox {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.dashboard .card .card-overfloo .card-top .card-3 .cardbox img {
+	margin-top: 52px;
+	margin-bottom: 20px;
+}
+
+.dashboard .card .card-overfloo .card-top .card-3 .cardbox p {
+	font-size: 26px;
+	color: #293c8f;
+}
+
+.dashboard .card .card-overfloo .card-top .fabricImg1 {
+	background: url("../images/bg.png") center center no-repeat;
+}
+
+.dashboard .card .card-overfloo .card-bottom {
+	margin-top: 15px;
+}
+
+.dashboard .card .card-overfloo .card-bottom .card-2 {
+	width: 259px;
+	height: 190px;
+	float: left;
+	background: #fff;
+	margin-right: 15px;
+}
+
+.dashboard .card .card-overfloo .card-bottom .card-2 .cardbox {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.dashboard .card .card-overfloo .card-bottom .card-2 .cardbox img {
+	margin-top: 52px;
+	margin-bottom: 20px;
+}
+
+.dashboard .card .card-overfloo .card-bottom .card-2 .cardbox p {
+	font-size: 26px;
+	color: #293c8f;
+}
+
+.dashboard .card .card-overfloo .card-bottom .card-2:nth-last-child(-n+4) {
+	/*margin-top: 15px;*/
+}
+
+.dashboard .card .card-overfloo .card-bottom .fabricImg2 {
+	background: url("../images/fbj.png") center center no-repeat;
+}
+
+.proes {
+	position:absolute;
+	/*top: 152px;*/
+	left: 139px;
+	z-index: 100;
+}
+
+.proes .procetu {
+	width: 100%;
+}
+
+.proes .procetu .procechild {
+	float: left;
+	text-align: center;
+	position: relative;
+}
+
+.proes .procetu .procechild .wrap .proceround {
+	width: 70px;
+	height: 70px;
+	position: relative;
+	margin-right: 50px;
+}
+
+.proes .procetu .procechild .wrap .proceround img {
+	height: 70px;
+	width: 70px;
+}
+
+.proes .procetu .procechild .wrap .proceround .probarsfirst {
+	position: absolute;
+	width: 163px;
+	background: #adaeaf;
+	height: 3px;
+	top: 31px;
+	left: -158px;
+}
+
+.proes .procetu .procechild .wrap .proceround .probarslast {
+	position: absolute;
+	width: 163px;
+	background: #adaeaf;
+	height: 3px;
+	top: 31px;
+	right: -154px;
+}
+
+.proes .procetu .procechild .wrap .proceround .roundnum {
+	position: absolute;
+	top: 22px;
+	left: 28px;
+	color: #fff;
+}
+
+.proes .procetu .procechild .wrap .proceround .probars {
+	position: absolute;
+	width: 77px;
+	background: #adaeaf;
+	height: 3px;
+	left: 57px;
+	top: 31px;
+}
+
+.proes .procetu .procechild:first-child {
+	padding-left: 106px;
+}
+
+.proes .processtitle {
+	margin-top: 10px;
+	font-size: 20px;
+	color: #4d4d4d;
+	margin-left: -54px;
+}
+
+
+/*我要开卡样式*/
+
+.opencards {
+	margin: -2px 90px 0px 88px;
+	height: 500px;
+	background: #fff;
+	/*min-height:758px;*/
+	/*overflow-y: scroll;*/
+	/*overflow-x:visible;*/
+	/*position: relative;*/
+}
+
+.opencards .opencardsone {
+	height:500px;
+	position: relative;
+}
+
+.opencards .opencardsone .respect {
+	margin-top: 49px;
+	margin-left: 35px;
+}
+
+.opencards .opencardsone .respect span:nth-child(1) {
+	font-size: 25px;
+	color: #5f6165;
+}
+
+.opencards .opencardsone .respect span:last-child {
+	font-size: 26px;
+	margin-left: 15px;
+	color: #ad7b04;
+}
+
+.opencards .opencardsone .presentation {
+	margin: 91px 0 48px 0;
+	color: #9c9a9a;
+	font-size: 24px;
+	text-align: center;
+}
+
+.opencards .opencardsone .process {
+	margin-top: 48px;
+	margin-bottom: 66px;
+}
+
+.opencards .opencardsone .process .procetu {
+	width: 100%;
+	padding: 0 44px 0 45px;
+}
+
+.opencards .opencardsone .process .procetu .procechild {
+	float: left;
+	text-align: center;
+	position: relative;
+}
+
+.opencards .opencardsone .process .procetu .procechild .wrap .proceround {
+	width: 70px;
+	height: 70px;
+	position: relative;
+	margin-right: 50px;
+}
+
+.opencards .opencardsone .process .procetu .procechild .wrap .proceround img {
+	height: 70px;
+	width: 70px;
+}
+
+.opencards .opencardsone .process .procetu .procechild .wrap .proceround .probarsfirst {
+	position: absolute;
+	width: 116px;
+	background: #adaeaf;
+	height: 3px;
+	top: 31px;
+	left: -106px;
+}
+
+.opencards .opencardsone .process .procetu .procechild .wrap .proceround .probarslast {
+	position: absolute;
+	width: 116px;
+	background: #adaeaf;
+	height: 3px;
+	top: 31px;
+	right: -103px;
+}
+
+.opencards .opencardsone .process .procetu .procechild .wrap .proceround .roundnum {
+	position: absolute;
+	top: 22px;
+	left: 28px;
+	color: #fff;
+}
+
+.opencards .opencardsone .process .procetu .procechild .wrap .proceround .probars {
+	position: absolute;
+	width: 77px;
+	background: #adaeaf;
+	height: 3px;
+	left: 57px;
+	top: 31px;
+}
+
+.opencards .opencardsone .process .procetu .procechild:first-child {
+	padding-left: 106px;
+}
+
+.opencards .opencardsone .process .processtitle {
+	margin-top: 20px;
+	font-size: 19px;
+	color: #4d4d4d;
+	margin-left: -54px;
+}
+
+.opencards .opencardsone .yellocard {
+	width: 100%;
+}
+
+.opencards .opencardsone .yellocard .opencardstyle {
+	width: 300px;
+	background: #fccf00;
+	height: 66px;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 66px;
+	font-size: 26px;
+}
+
+.opencards .opencardsone .yellocard:hover {
+	cursor: pointer;
+}
+
+.opencards .opencardsone .openhom {
+	position: absolute;
+	bottom: -65px;
+	cursor: pointer;
+}
+
+.opencards .opencardsone .openhom img {
+	float: left;
+}
+
+.opencards .opencardsone .openhom .openback {
+	width: 100%;
+	padding-top: 18px;
+	padding-left: 66px;
+}
+
+.opencards .opencardsone .openhom .openback span {
+	font-size: 20px;
+	display: inline-block;
+	color: #adaeaf;
+}
+
+.opencards .opencardstyle {
+	margin-top: 95px;
+	padding: 0 60px;
+	position: relative;
+	/*height: 500px;*/
+}
+
+.opencards .opencardstyle .cardboxes {
+	background: url("../images/conent.png") center no-repeat;
+	padding: 28px 54px 24px 54px;
+}
+
+.opencards .opencardstyle .cardboxes .cardboxchild .imgdiv {
+	text-align: center;
+}
+
+.opencards .opencardstyle .cardboxes .cardboxchild .imgdiv .cardname {
+	margin-bottom: 5px;
+	margin-top: 12px;
+	font-weight: bold;
+	font-size: 18px;
+	color: #000000;
+}
+
+.opencards .opencardstyle .cardboxes .cardboxchild .imgdiv img {
+	margin-top: 10px;
+	width: 192px;
+	height: 116px;
+}
+
+.opencards .opencardstyle .cardboxes .cardboxchild .carboxtext {
+	margin-top: 10px;
+	margin-bottom: 24px;
+	line-height: 20px;
+	color: #000;
+	overflow: hidden;
+	text-align: center;
+}
+
+.opencards .opencardstyle .openout {
+	position: absolute;
+	bottom: -78px;
+	right: 0px;
+	cursor: pointer;
+}
+
+.opencards .opencardstyle .openout img {
+	float: left;
+}
+
+.opencards .opencardstyle .openout .openback {
+	width: 100%;
+	padding-top: 18px;
+	padding-left: 66px;
+}
+
+.opencards .opencardstyle .openout .openback span {
+	font-size: 20px;
+	display: inline-block;
+	color: #adaeaf;
+}
+
+.opencards .cardinfo {
+	margin-top: 120px;
+	/*min-height: 500px;*/
+	position: relative;
+}
+
+.opencards .cardinfo .openout {
+	position: absolute;
+	bottom: -78px;
+	right: 0px;
+	cursor: pointer;
+}
+
+.opencards .cardinfo .openout img {
+	float: left;
+}
+
+.opencards .cardinfo .openout .openback {
+	width: 100%;
+	padding-top: 18px;
+	padding-left: 66px;
+}
+
+.opencards .cardinfo .openout .openback span {
+	font-size: 20px;
+	display: inline-block;
+	color: #adaeaf;
+}
+
+.opencards .identity {
+	min-height: 540px;
+	position: relative;
+}
+
+.opencards .identity .openout {
+	position: absolute;
+	bottom: -78px;
+	right: 0px;
+	cursor: pointer;
+}
+
+.opencards .identity .openout img {
+	float: left;
+}
+
+.opencards .identity .openout .openback {
+	width: 100%;
+	padding-top: 18px;
+	padding-left: 66px;
+}
+
+.opencards .identity .openout .openback span {
+	font-size: 20px;
+	display: inline-block;
+	color: #adaeaf;
+}
+
+.opencards .identityOK {
+	margin-top: 95px;
+	position: relative;
+}
+
+.opencards .identityOK .openout {
+	position: absolute;
+	bottom: -78px;
+	right: 0px;
+	cursor: pointer;
+}
+
+.opencards .identityOK .openout img {
+	float: left;
+}
+
+.opencards .identityOK .openout .openback {
+	width: 100%;
+	padding-top: 18px;
+	padding-left: 66px;
+}
+
+.opencards .identityOK .openout .openback span {
+	font-size: 20px;
+	display: inline-block;
+	color: #adaeaf;
+}
+
+.opencards .pictures {
+	margin-top: 95px;
+	min-height:663px;
+	position: relative;
+}
+
+.opencards .pictures .openout {
+	position: absolute;
+	bottom: -78px;
+	right: 0px;
+	cursor: pointer;
+}
+
+.opencards .pictures .openout img {
+	float: left;
+}
+
+.opencards .pictures .openout .openback {
+	width: 100%;
+	padding-top: 18px;
+	padding-left: 66px;
+}
+
+.opencards .pictures .openout .openback span {
+	font-size: 20px;
+	display: inline-block;
+	color: #adaeaf;
+}
+
+.opencards .information {
+	margin-top: 125px;
+	min-height: 500px;
+	position: relative;
+}
+
+.opencards .information .openout {
+	position: absolute;
+	bottom: -141px;
+	right: 0px;
+	cursor: pointer;
+}
+
+.opencards .information .openout img {
+	float: left;
+}
+
+.opencards .information .openout .openback {
+	width: 100%;
+	padding-top: 18px;
+	padding-left: 66px;
+}
+
+.opencards .information .openout .openback span {
+	font-size: 20px;
+	display: inline-block;
+	color: #adaeaf;
+}
+
+.opencards .produc {
+	margin-top: 95px;
+	min-height: 500px;
+	position: relative;
+	/*display: flex;
+	justify-content: center;*/
+}
+.productbox{
+	margin-left:50px ;
+}
+.opencards .produc .openout {
+	position: absolute;
+	bottom: -78px;
+	right: 0px;
+	cursor: pointer;
+}
+
+.opencards .produc .openout img {
+	float: left;
+}
+
+.opencards .produc .openout .openback {
+	width: 100%;
+	padding-top: 18px;
+	padding-left: 66px;
+}
+
+.opencards .produc .openout .openback span {
+	font-size: 20px;
+	display: inline-block;
+	color: #adaeaf;
+}
+
+.opencards .infosuccess {
+	margin-top: 125px;
+	min-height: 500px;
+	position: relative;
+}
+
+.opencards .infosuccess .openout {
+	position: absolute;
+	bottom: -78px;
+	right: 0px;
+	cursor: pointer;
+}
+
+.opencards .infosuccess .openout img {
+	float: left;
+}
+
+.opencards .infosuccess .openout .openback {
+	width: 100%;
+	padding-top: 18px;
+	padding-left: 66px;
+}
+
+.opencards .infosuccess .openout .openback span {
+	font-size: 20px;
+	display: inline-block;
+	color: #adaeaf;
+}
+
+.opencards .passwordsucc {
+	margin-top: 125px;
+	min-height: 500px;
+	position: relative;
+}
+
+.opencards .passwordsucc .cardtitle {
+	color: #ad7b04;;
+	font-weight: normal;
+	font-size: 22px;
+	margin-left: 10px;
+}
+
+.opencards .passwordsucc .openout {
+	position: absolute;
+	bottom: -78px;
+	right: 0px;
+	cursor: pointer;
+}
+
+.opencards .passwordsucc .openout img {
+	float: left;
+}
+
+.opencards .passwordsucc .openout .openback {
+	width: 100%;
+	padding-top: 18px;
+	padding-left: 66px;
+}
+
+.opencards .passwordsucc .openout .openback span {
+	font-size: 20px;
+	display: inline-block;
+	color: #adaeaf;
+}
+
+.opencards .opencomplete {
+	margin-top: 125px;
+	min-height: 500px;
+	position: relative;
+}
+
+.opencards .opencomplete h1 {
+	color: green;
+	font-size: 22px;
+}
+
+.opencards .opencomplete h2 {
+	color: red;
+	font-size: 22px;
+}
+
+.opencards .opencomplete .advertitle .advertext {
+	font-size: 16px;
+	margin-top: 5px;
+}
+
+.opencards .opencomplete .advertitle:hover {
+	text-decoration: none;
+}
+
+.opencards .opencomplete .openout {
+	position: absolute;
+	bottom: -78px;
+	right: 0px;
+	cursor: pointer;
+}
+
+.opencards .opencomplete .openout img {
+	float: left;
+}
+
+.opencards .opencomplete .openout .openback {
+	width: 100%;
+	padding-top: 18px;
+	padding-left: 66px;
+}
+
+.opencards .opencomplete .openout .openback span {
+	font-size: 20px;
+	display: inline-block;
+	color: #adaeaf;
+}
+
+.cardAll {
+	display: flex;
+}
+
+.secondS {
+	flex-wrap: wrap;
+}
+
+/*计时器样式*/
+.timer{
+   border: 1px solid red;　　
+   color:green;　
+   line-height: 70px;
+   font-weight: bold;
+   height:70px;
+   width: 70px;
+   font-size: 22px;
+   text-align: center;
+   line-height: 70px;
+   border-radius: 50%;
+   
+   /*margin-bottom: -100px;*/
+   
+   /*position: absolute;*/
+   /*bottom: 0;*/
+}
+
+.backcardIF,.backcardPhoto{
+	position: fixed;
+	right: 0;
+	bottom: 0px;
+}
+.backOpenBtns{
+	text-align: center;
+	position:absolute;
+	width: 100%;
+	bottom: 50;
+}
+#openCardTimer{
+	float: right;
+	margin-right:100px;
+}
+.openCardFooter{
+	margin: -2px 90px 0px 88px;
+	width: 1102px;
+	clear: both;
+}
+.openCardIdMsgone{
+	position: absolute;
+	bottom: -50px;
+}
+.photoTips{
+	width: 600px;
+	height: 300px;
+	margin: 0 auto;
+	margin-top: 80px;
+	text-align: center;	
+}
+.bor{
+	border: 1px solid #0b94ea;;
+}
+#inOne{
+	margin-right: 20px;
+}
+#inOne,#inTwo{
+	float: left;
+	vertical-align: middle;
+}
+.inF{
+	overflow: hidden;
+}
+.openCardGetMsg{
+	width:100%;
+	margin: 0 auto;
+	text-align: center;
+	position: absolute;
+	bottom: 50px;
+}
+.wannaTopOn{
+	margin:150px;
+}
+.openCardRM{
+	width: 10%;
+	margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+}
+
+.cont{
+	overflow: auto;
+}
+/*所有模块的央视背景*/
+.bgC{
+	background-color: #fff;
+	height:730px;
+	width: 85%;
+	margin: 0 auto;
+	overflow: auto;
+	position: relative;
+	padding-top: 25px;
+}
+.bgc::-webkit-scrollbar {display:none}
+.switch{
+	margin-top:40px;
+}
+.switchLeft{
+	float: left;
+}
+.switchRight{
+	float: right;
+}
+.limit{
+	display: none;
+    margin-top: 40px;
+}
+.theBig{
+	background-color: #FFF;
+	width: 1102px;
+	margin: 0 auto;
+}
+.infodict span{
+	margin-top: 15px;
+}
+.infodict{
+	margin-top: 25px;
+}
+.open-card-Fa{
+	width:100%;
+	margin: 95px auto 0 auto;
+	text-align: center;	
+}
+.sF{
+	position: relative;
+}
+.open-card-footer{
+	width: 100%;
+	margin: 0 auto;
+	position: absolute;
+	bottom: 50px;
+	text-align: center;
+}
+/*.opencardtwo{
+  margin: -2px 90px 86px 88px;
+  height: 758px;
+  background: #edf9ff;
+  border:1px solid red;
+}*/
+
+
+/*# sourceMappingURL=dashboar.css.map */

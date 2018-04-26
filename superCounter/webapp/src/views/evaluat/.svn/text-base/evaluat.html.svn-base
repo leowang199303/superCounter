@@ -1,0 +1,69 @@
+<!--第一部分-->
+<div class="fS testStart" ng-if="num == 0">
+	<div class="respect">
+		<span>尊敬的用户</span>
+		<span>欢迎您</span>
+	</div>
+
+	<div class="intro">
+		您将要进行风险测试，请点击按钮开始测试
+	</div>
+
+	<div class="startBtn" ng-click="test.startTest()">
+		开始风险评测
+	</div>
+	
+</div>
+
+<div class="fS"  ng-if="num == 1" >
+	<div class="qF" ng-repeat="q in questions track by $index" ng-init="outerIndex = $index" ng-show="ques == $index+1">
+		<p class="words">{{outerIndex+one}}/{{allQuestion}}</p>
+		<p class="wordsTit">{{q.qsName}}    <span style="color: red;" ng-if="noChioce">请选择</span></p>
+		<ul>
+			<li ng-repeat="qs in q.qsOptions track by $index" class="wordsQue" ng-init="innerIndex = $index" ng-click="test.answer(outerIndex,innerIndex)">
+				<input type="radio" name="as_{{outerIndex}}" class="inpu_{{outerIndex}}_{{innerIndex}}" value="{{qs.qsKey}}" idV="{{q.qsId}}">
+				{{qs.qsKey}}：{{qs.qsVal}}
+			</li>
+		</ul>
+		<div class="btnF btnP">
+			<div ng-if=" btnShow == true">
+			   <button ng-click="test.preQues()" ng-if="ques != 1" class="btn btn-primary">上一题</button>
+			   <button ng-click="test.nextQues()"  class="btn btn-primary" ng-if="ques != allQuestion">下一题</button>
+			   <button ng-click="test.submit()" ng-if="ques == allQuestion && btnShow == true" class="btn btn-primary">提交</button>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<div ng-if="num == 2" class="fS">
+	<div class="result">
+		<p class="resultOne">您是：<span style="color:#ad7b04;">&nbsp;&nbsp;&nbsp;&nbsp;{{type}}</span></p>
+		<p class="resultContent">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{typeVal}}</p>
+	</div>
+	<div class="btnOne gA">
+		<button class="btn btn-primary result" ng-click="test.doAgain()">重新评测</button>
+	</div>
+	<div ng-include="'tpl/finishBottom.html'" id="finishBottom">
+        	
+    </div>
+</div>
+
+<div class="fS" ng-if="num == 3">
+	<div class="tipsCard">
+		<div class="bankCard">
+			请插入您的身份证
+		</div>
+		<div class="cardPosion">
+
+		</div>
+		<div class="readCard">
+				身份证读取中。。。
+		</div>
+	</div>
+	
+</div>
+<div class="openCardFooter">
+	<div ng-include="'tpl/timer.html'" id="openCardTimer" ng-if="num == 2 || num == 3"></div>
+	<div ng-include="'tpl/footer.html'" ng-click="test.testBack()"></div>
+</div>

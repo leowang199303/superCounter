@@ -1,0 +1,101 @@
+.fS{
+	width: 90%;
+	margin: auto;
+	background-color: #fff;
+	height: 730px;
+	padding-top: 49px;
+	position: relative;
+	overflow: auto;
+}
+.respect{
+	/*margin-top: 49px;*/
+	margin-left: 35px;
+}
+.respect span:nth-child(1){
+	font-size: 25px;
+    color: #5f6165;
+}
+.respect span:last-child{
+	font-size: 26px;
+    margin-left: 15px;
+    color: #ad7b04;
+}
+.intro{
+	margin: 91px 0 70px 0;
+    color: #9c9a9a;
+    font-size: 24px;
+    text-align: center;
+}
+.startBtn{
+	width: 300px;
+    background: #fccf00;
+    height: 66px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 66px;
+    font-size: 26px;
+}
+.qF{
+	width: 90%;
+	margin: 0 auto;
+	text-align: left;
+}
+.words{
+	font-size: 26px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.wordsTit{
+	font-size:30px;
+	color: black;
+	margin-bottom: 30px;
+}
+.wordsQue{
+	margin-top: 20px;
+	font-size: 26px;
+	color: gray;
+	height: 30px;
+	line-height: 30px;
+	border-top: 1px solid lightgray;
+	border-bottom: 1px solid lightgray;
+}
+.btnF{
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+}
+.result{
+	width: 90%;
+	margin: 0 auto;
+}
+.resultTwo{
+	font-size: 26px;
+    color: black;
+    font-weight: bold;
+}
+.resultOne{
+	font-size: 26px;
+    color: black;
+}
+.btnP{
+	position: absolute;
+	bottom:50px;
+}
+.btnOne{
+	position: absolute;
+	bottom:50%;
+}
+.gA{
+	margin-left:570px;
+}
+
+.resultContent{
+	margin-top:100px;
+	width: 90%;
+	font-size: 18px;
+	line-height: 22px;
+}
+#finishBottom{
+	position: absolute;
+	bottom: 10px;
+}

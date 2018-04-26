@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>index</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet"/>
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
+    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="files/index/styles.css" type="text/css" rel="stylesheet"/>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/prototypePre.js"></script>
+    <script src="data/document.js"></script>
+    <script src="resources/scripts/prototypePost.js"></script>
+    <script src="files/index/data.js"></script>
+    <script type="text/javascript">
+      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
+      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
+      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
+    </script>
+  </head>
+  <body>
+    <div id="base" class="">
+
+      <!-- Unnamed (水平线) -->
+      <div id="u0" class="ax_default arrow">
+        <img id="u0_img" class="img " src="images/index/regen/u0.png"/>
+        <!-- Unnamed () -->
+        <div id="u1" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u2" class="ax_default arrow">
+        <img id="u2_img" class="img " src="images/index/regen/u0.png"/>
+        <!-- Unnamed () -->
+        <div id="u3" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u4" class="ax_default arrow">
+        <img id="u4_img" class="img " src="images/index/regen/u0.png"/>
+        <!-- Unnamed () -->
+        <div id="u5" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u6" class="ax_default arrow">
+        <img id="u6_img" class="img " src="images/index/regen/u0.png"/>
+        <!-- Unnamed () -->
+        <div id="u7" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (水平线) -->
+      <div id="u8" class="ax_default arrow">
+        <img id="u8_img" class="img " src="images/index/regen/u0.png"/>
+        <!-- Unnamed () -->
+        <div id="u9" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u10" class="ax_default text_field">
+        <input id="u10_input" type="text" value="&nbsp; 选择卡片 "/>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u11" class="ax_default text_field">
+        <input id="u11_input" type="text" value="&nbsp; 身份审核"/>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u12" class="ax_default text_field">
+        <input id="u12_input" type="text" value="&nbsp; 信息录入"/>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u13" class="ax_default text_field">
+        <input id="u13_input" type="text" value="&nbsp; 产品签约"/>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u14" class="ax_default text_field">
+        <input id="u14_input" type="text" value="&nbsp; 信息确认"/>
+      </div>
+
+      <!-- Unnamed (文本框) -->
+      <div id="u15" class="ax_default text_field">
+        <input id="u15_input" type="text" value="&nbsp; 设置密码"/>
+      </div>
+
+      <!-- Unnamed (椭圆形) -->
+      <div id="u16" class="ax_default ellipse">
+        <img id="u16_img" class="img " src="images/index/regen/u16.png"/>
+        <!-- Unnamed () -->
+        <div id="u17" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (椭圆形) -->
+      <div id="u18" class="ax_default ellipse">
+        <img id="u18_img" class="img " src="images/index/regen/u16.png"/>
+        <!-- Unnamed () -->
+        <div id="u19" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (椭圆形) -->
+      <div id="u20" class="ax_default ellipse">
+        <img id="u20_img" class="img " src="images/index/regen/u16.png"/>
+        <!-- Unnamed () -->
+        <div id="u21" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (椭圆形) -->
+      <div id="u22" class="ax_default ellipse">
+        <img id="u22_img" class="img " src="images/index/regen/u16.png"/>
+        <!-- Unnamed () -->
+        <div id="u23" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (椭圆形) -->
+      <div id="u24" class="ax_default ellipse">
+        <img id="u24_img" class="img " src="images/index/regen/u16.png"/>
+        <!-- Unnamed () -->
+        <div id="u25" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+
+      <!-- Unnamed (椭圆形) -->
+      <div id="u26" class="ax_default ellipse">
+        <img id="u26_img" class="img " src="images/index/regen/u16.png"/>
+        <!-- Unnamed () -->
+        <div id="u27" class="text" style="display:none; visibility: hidden">
+          <p><span></span></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

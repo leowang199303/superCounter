@@ -1,0 +1,378 @@
+.divs {
+	height: 100px;
+}
+
+.clearfix:after {
+	content: "020";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.btn2 {
+	height: 80px;
+	min-width: 50px;
+	margin: -2px 15px 0 15px;
+	/*border: 1px solid #ddd;*/
+	padding: 25px 0px 0px 0px;
+	background-color: #fafafa;
+	background-image: none;
+	filter: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	display: inline-block;
+	color: #646464;
+	text-shadow: none;
+	text-align: center;
+	cursor: pointer;
+	position: relative;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	line-height: normal;
+}
+
+.smimgdiv {
+	height: 100px;
+	width: 150px;
+}
+
+.tishidiv {
+	height: 300px;
+	width: 400px;
+}
+
+.backbtn {
+	min-height: 80px;
+	/*margin-bottom: 5%;*/
+}
+
+.backCardK {
+	position: fixed;
+	bottom: 0px;
+	right: 0;
+}
+
+.backbtn a {
+	float: right;
+}
+
+
+/* 开始开卡流程*/
+
+.cardstart {
+	padding: 0 5%;
+}
+
+
+/*卡片盒子样式*/
+
+
+/*.cardtitle{
+    font-size:20px;
+    margin-left: 30px;
+    padding-top: 10px;
+}
+
+.cardboxes{
+    max-height:300px;
+    margin-top:40px;
+    padding: 20px;
+}
+
+.cardboxes:nth-child(-n+3){
+    margin-top:5px;
+}
+
+.cardboxchild{
+    border:1px solid #ccc;
+    border-radius: 25px;
+    padding: 15px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.3),0 0 40px rgba(0,0,0,0.1) inset;
+}
+
+.carboxtext{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.carboxtext>P{
+    text-align: center;
+}*/
+
+
+/*卡片详情页面*/
+
+.cardinfoimg {
+	text-align: center;
+}
+
+.cardinfoimg img {
+	margin-bottom: 2%;
+}
+
+.cardinfoimg h1 {
+	font-weight: bold;
+}
+
+.carddesign {
+	margin-left: 35%;
+	width: 40%;
+	text-align: left;
+}
+
+.carddesign em {
+	font-weight: bold;
+}
+
+.btnclear {
+	margin-right: 2%;
+}
+
+
+/*身份验证页面*/
+
+.tishidivst {
+	max-width: 600px;
+	margin: 5% auto;
+}
+
+.tishidiv {
+	min-height: 350px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.tishidivst p {
+	text-align: center;
+	margin: 2% 0;
+}
+
+.tishidivst p:nth-child(1) {
+	margin: 5% 0
+}
+
+
+/*身份审核通过页面*/
+
+
+/*.operinfo{
+    margin:5% 0px;
+}*/
+
+.opersuss {
+	color: #646464;
+	font-weight: normal;
+	font-size: 18px;
+	margin-bottom: 2%;
+}
+
+.opersuss em {
+	font-size: 18px;
+	margin-right: 2%;
+}
+
+.operytrue {
+	min-height: 200px;
+	margin-bottom: 2%;
+}
+
+
+/*.operinfo{
+    margin:2% 0px;
+
+}*/
+
+.operinfo h1 {
+	font-weight: 500;
+}
+
+
+/*信息录入*/
+
+
+/*.infoipport{
+    margin-top:5%;
+}*/
+
+.form-actionss {
+	margin: 5% 0px
+}
+
+
+/*产品签约样式*/
+
+
+/*.product{
+    margin:5% 0px;
+}*/
+
+.productbox {
+	padding: 10px;
+	width: 300px;
+	/*width:19.66667%;*/
+}
+
+.col-md-3 {
+	width: 20%;
+}
+
+.productinnet {
+	border: 1px solid #ccc;
+	border-radius: 10%;
+	min-height: 150px;
+}
+
+.producttext {
+	line-height: 180px;
+	text-align: center
+}
+
+.productcheck {
+	background-color: white;
+	padding-left: 10px;
+	margin: 10% 0px;
+}
+
+.productcheck .checker {
+	margin: 5% 0px;
+}
+
+.probutton {
+	/*position: absolute;*/
+	/*bottom:50px;*/
+	/*margin-top:8%;*/
+}
+
+
+/* 信息确认样式*/
+
+
+/*.infocheck{
+    margin:5% 0px;
+}*/
+
+.infoqueh {
+	/*padding-left:5%;*/
+}
+
+.infoqueh h1 {
+	margin: 4% 0px;
+	font-weight: 400;
+}
+
+.infoqueh p {
+	font-size: 20px;
+	margin: 4% 0px;
+}
+
+.infodict {
+	text-indent: 10%;
+}
+
+.infodiv {
+	width: 82%;
+	min-height: 300px;
+	/*margin-bottom: 32%;*/
+	/*   border:1px solid #ccc;*/
+	border-radius: 5px;
+}
+
+.mt {
+	margin-bottom: 32%;
+	/*text-align:center;*/
+}
+
+.infodiv p {
+	text-align: center;
+	line-height: 300px;
+	font-weight: bold;
+}
+
+
+/* 签名区域*/
+
+.infoqm {
+	position: relative;
+	/*margin-bottom: 50%;*/
+}
+
+
+/* 请输入密码*/
+
+.password {
+	margin: 1% 0;
+}
+
+
+/* 开卡成功*/
+
+.opencard {
+	margin: 1% 0px;
+	padding-left: 4%;
+}
+
+.opencard h1 {
+	font-weight: 400;
+	font-size: 20px;
+}
+
+.opencard:last-child {
+	margin-top: 5%;
+}
+
+.opencard:nth-child(2) {
+	margin: 4% 0;
+}
+
+.endscrd {
+	border-radius: 10px;
+	background: green;
+}
+
+.needF {
+	display: flex;
+}
+
+.beforeStep {
+	margin-top: 10px;
+}
+
+.inputWidths {
+	width: 200px;
+}
+
+
+/*遮罩层样式*/
+
+.mask {
+	position: absolute;
+	top: 0px;
+	filter: alpha(opacity=60);
+	background-color: #777;
+	z-index: 1002;
+	left: 0px;
+	opacity: 0.7;
+	-moz-opacity: 0.5;
+}
+
+.passwordsucc,
+.get-right-open-card {
+	position: absolute;
+	top: 195px;
+	left: 132px;
+	z-index: 10090;
+	background-color: white;
+	width: 80%;
+	border-radius: 30px;
+	/*margin-top: 37px;*/
+}
+
+.btnStyle {
+	width: 100px;
+	height: 40px;
+}

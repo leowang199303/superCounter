@@ -1,0 +1,70 @@
+.form-left{
+	float: left;
+}
+.form-right{
+	float: left;
+	display: block;
+	margin-left: 30px;
+	color: red;
+}
+.saveMoney-form-group{
+	margin-top: 50px;
+}
+.saveMoney-card-detail{
+	margin-top: 15px;
+}
+/*.saveMoney-form-group-marR{
+	margin-right: 40px;
+}*/
+.saveMoneyPage-btn{
+	position: absolute;
+	bottom: 50px;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.saveMoney-pwd{
+	position: absolute;
+	left:350px;
+	top: 300px;
+}
+.inputWidth{
+	width:200px;
+}
+.btnStyle{
+	width: 100px;
+    height: 40px;
+}
+.backCardK {
+	position: fixed;
+	bottom: 0px;
+	right: 0;
+}
+.someStyle{
+	font-size: 22px;
+}
+.input-width-saveMoney{
+	width: 200px;
+}
+.input-width-saveMoney-bottom{
+	width: 200px;
+}
+.need-little-top-saveMoney{
+	margin-top: 8px;
+}
+.saveMoneyPage-zhuan-title{
+	width: 90%;
+	margin: 0 auto;
+	font-size: 22px;
+	text-align: center;
+	color: #ad7b04;
+}
+.cardtitle-saveMoneyPage{
+	font-size: 22px;
+    color: #ad7b04;
+    font-weight: bold;
+}
+.logoImg{
+	width: 30px;
+	height: 30px;
+}
